@@ -27,7 +27,7 @@
               <div class="col-md-6 pl-0 mr-auto">
                 <h1 class="title black">Shopping is</h1>
                 <h1 class="title my-blue-color font-weight-bold">MORE FUN</h1>
-                <p class="subtitle">Vivamus dignissim a ex eu ornare. Ut fermentum orci <br>
+                <p class="subtitle">Vivamus dignissiasfsdgasdfhssfjgghfhkfgklljjlfhm a ex eu ornare. Ut fermentum orci <br>
                   vel diam ultricies faucibus. Quisque quis erat sed</p>
                   <a href="/Shop"><button type="button" class="btn WHITE-BTN font-weight-bold my-blue-color">SHOP NOW</button></a>
               </div>
