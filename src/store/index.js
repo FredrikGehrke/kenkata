@@ -8,7 +8,7 @@ export default new Vuex.Store({
     products: []
   },
   getters: {
-    
+    products: state => state.products,
   },
   mutations: {
     SET_PRODUCTS : (state, products) => {
