@@ -1,5 +1,5 @@
 <template>
-<div class="owl-item">
+
   <div class="card rounded-top position-relative">
     <span class="rounded-circle padding bg-primary text-white position-absolute mark">New</span>
     <img src="../assets/guy1.png" class="card-img-top img-fluid" alt="...">
@@ -14,7 +14,7 @@
   <div class="card-bodyy pl-3 pt-2 rounded-bottom position-absolute">
     
     <div class="card-text text-white">
-      <p>Blue silk flare sleeved top</p>
+      <p>{{ product.short }}</p>
       <!-- <p class="mt-1 border d-inline-block px-2 small">Fashion</p> -->
       <!-- <tag :text="'Fashion'" /> -->
       <p class="small text-decoration-line-through">$220.00</p>
@@ -25,7 +25,7 @@
 
   </div>
 </div>
-</div>
+
 </template>
 
 <script>
@@ -33,7 +33,8 @@
 export default {
   components: {
     // tag
-  }
+  },
+  props: ['product']
 }
 </script>
 
