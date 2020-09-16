@@ -15,13 +15,21 @@
 
 import navbar from '@/components/navbar.vue'
 import myFooter from '@/components/footer.vue'
+import { mapActions } from 'vuex'
 
 export default {
   name: 'App',
   components: {
     navbar,
     myFooter
+  },
+  methods: {
+    ...mapActions(['getProducts'])
+  },
+  mounted() {
+    this.getProducts();
   }
+
 }
 </script>
 
