@@ -46,16 +46,16 @@ $(document).ready(function() {
     // AOS INIT
     AOS.init();
 
+    // Enables tooltip
+    $('[data-toggle="tooltip"]').tooltip()
 
-    // $('[data-toggle="tooltip"]').tooltip()
-    $('div').tooltip();
+    // $('.fa-shopping-cart').data('tooltip-custom-class', 'tooltip-cart').tooltip();
+    // $('.fas fa-circle').data('tooltip-custom-class', 'tooltip-circle').tooltip();
 
-    $('.fa-shopping-cart').data('tooltip-custom-class', 'tooltip-danger').tooltip();
-
-    $(document).on('inserted.bs.tooltip', function(e) {
-        var tooltip = $(e.target).data('bs.tooltip');
-        $(tooltip.tip).addClass($(e.target).data('tooltip-custom-class'));
-    });
+    // $(document).on('inserted.bs.tooltip', function(e) {
+    //     var tooltip = $(e.target).data('bs.tooltip');
+    //     $(tooltip.tip).addClass($(e.target).data('tooltip-custom-class'));
+    // });
 
 
 

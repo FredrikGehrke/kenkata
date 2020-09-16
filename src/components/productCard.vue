@@ -3,22 +3,24 @@
   <div class="card rounded-top position-relative">
     <span class="rounded-circle padding bg-primary text-white position-absolute mark">New</span>
     <img src="../assets/guy1.png" class="card-img-top img-fluid" alt="...">
-    <div class="buttons position-absolute d-flex flex-column p-3 rounded-pill align-items-center">
-      <i class="fas fa-circle bigger-red mt-2 d-flex"></i>
-      <i class="far fa-heart py-1 pt-2"></i>
-      <i class="fas fa-random py-1"></i>
-      <i class="fas fa-search py-1"></i>
-      <i class="fas fa-cart-arrow-down py-1"></i>
+    <div class="buttons position-absolute d-flex flex-column p-2 rounded-pill align-items-center">
+      <a href="#" data-placement="left" data-html="true" data-toggle="tooltip" title="<i class='fas fa-circle circle-green mr-1'></i><i class='fas fa-circle circle-purple mr-1'></i><i class='fas fa-circle circle-red mr-1'></i><i class='fas fa-circle circle-black'></i>">
+        <i class="fas fa-circle red mt-2"></i>
+      </a>
+      <i class="far fa-heart py-1 pt-2 grey"></i>
+      <i class="fas fa-random py-1 grey"></i>
+      <i class="fas fa-search py-1 grey"></i>
+      <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="fas fa-shopping-cart py-1 grey"></i></a>    
     </div>
 
   <div class="card-bodyy pl-3 pt-2 rounded-bottom position-absolute">
     
     <div class="card-text text-white">
-      <p>Blue silk flare sleeved top</p>
+      <p class="pb-4">Blue silk flare sleeved top</p>
       <!-- <p class="mt-1 border d-inline-block px-2 small">Fashion</p> -->
       <!-- <tag :text="'Fashion'" /> -->
       <p class="small text-decoration-line-through">$220.00</p>
-      <p class="text-primary font-weight-bold">$190.00</p>
+      <p class="my-blue-color font-weight-bold">$190.00</p>
     </div>
   </div>
   <div class="card-body position-absolute">
@@ -38,6 +40,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.grey {
+  color: #AAAAAA;
+}
+.red {
+  color: #FE6C6C;
+}
+.text-decoration-line-through {
+  text-decoration: line-through;
+}
+
 .padding {
   padding: 1em 0.8em ;
 }

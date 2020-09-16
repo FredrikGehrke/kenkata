@@ -76,16 +76,8 @@ export default {
     color: white !important;
   }
 
-
-  .tooltip2-inner {
-    background-color: white;
-  }
-  .tooltip.bs-tooltip-left .arrow:before{
-    border-right-color: var(--ownBlue) !important;
-  }
-
   .tooltip-inner {
-    background-color: white;
+    background-color: var(--ownBlue);
     text-align: center;
     border-radius: .25rem;
     letter-spacing: 1px;
@@ -95,16 +87,21 @@ export default {
     opacity: 1 !important;
   }
 
-  .tooltip-danger .tooltip-inner {
+  /* .tooltip-cart .tooltip-inner {
     background-color: var(--ownBlue) !important;
     text-align: center;
     border-radius: .25rem;
     letter-spacing: 1px;
   }
+  .tooltip-circle .tooltip-inner {
+    background-color: white !important;
+    text-align: center;
+    border-radius: .25rem;
+    letter-spacing: 1px;
+  } */
 
-  .tooltip.tooltip-danger .arrow:before {
-    /* border-bottom-color: var(--ownBlue)!important;
-    border-top-color: var(--ownBlue) !important; */
+  .bs-tooltip-auto[x-placement^=left] .arrow::before, .bs-tooltip-left .arrow::before {
+    border-left-color: var(--ownBlue) !important;
   }
 
   .circle-green {
