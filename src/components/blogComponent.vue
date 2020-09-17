@@ -24,8 +24,9 @@
 
     export default {
     components :{
-    
+
     }
+    
 }
 </script>
 

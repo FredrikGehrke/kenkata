@@ -49,7 +49,6 @@ export default {
     outline: 0 !important;
   }
 
-
   .my-blue-color {
     color: var(--ownBlue) !important;
   }
@@ -76,7 +75,6 @@ export default {
     background-color: var(--ownBlue) !important;
     color: white !important;
   }
-
 
   .owl-dots button.owl-dot span {
     border-radius: 4px !important;
@@ -128,8 +126,5 @@ export default {
   .circle-black {
     color: black;
   }
-
-
-
 
 </style>
