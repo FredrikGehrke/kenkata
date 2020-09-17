@@ -14,23 +14,7 @@
               </div>
           </div>
       </div>
-      <!-- <div class="owl-container pt-3">
-        <div class="owl-carousel owl-theme owl-loaded owl-drag">
-          <div class="owl-stage-outer">
-            <div class="owl-stage">
-              <productCard />
-              <productCard />
-              <productCard />
-              <productCard />
-              <productCard />
-              <productCard />
-              <productCard />
-              <productCard />
-            </div>
-          </div>                
-        </div>
-      </div> -->
-    
+
       <carousel v-if="products" class="carousel mx-auto position-relative" :margin="15" :autoplay="true" :nav="false" :autoplayHoverPause="true" :responsive="{0:{items:1}, 768:{items:3}}"> 
 
         <productCard class="w-auto" v-for="product in products" :key="product.id" :product="product" />

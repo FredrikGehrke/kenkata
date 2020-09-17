@@ -77,6 +77,14 @@ export default {
   }
 
 
+  .owl-dots button.owl-dot span {
+    border-radius: 4px !important;
+    background: #E3E3E3 !important;
+    padding: 6px;
+  } .owl-dots button.owl-dot.active span {
+    background-color: var(--ownBlue) !important;
+  }
+  
   .tooltip2-inner {
     background-color: white;
   }
