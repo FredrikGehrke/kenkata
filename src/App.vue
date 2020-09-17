@@ -49,6 +49,7 @@ export default {
     outline: 0 !important;
   }
 
+
   .my-blue-color {
     color: var(--ownBlue) !important;
   }
