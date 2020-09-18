@@ -54,33 +54,33 @@ export default {
 
 <style lang="scss">
 
-  .next {
-    font-size: 2em;
-    color: #E3E3E3;
-    cursor: pointer;
-    position: absolute;
-    top: 35%;
-    right: -55px;
-    z-index: 10;
-      &:hover {
+.next {
+  font-size: 2em;
+  color: #E3E3E3;
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  right: -55px;
+  z-index: 10;
+    &:hover {
+    background-color: #20D3C2;
+    color: #fff;
+  }
+}
+.prev {
+  font-size: 2em;
+  color: #E3E3E3;
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  left: -55px;
+  z-index: 10;
+    
+    &:hover {
       background-color: #20D3C2;
       color: #fff;
     }
-  }
-  .prev {
-    font-size: 2em;
-    color: #E3E3E3;
-    cursor: pointer;
-    position: absolute;
-    top: 35%;
-    left: -55px;
-    z-index: 10;
-      
-      &:hover {
-        background-color: #20D3C2;
-        color: #fff;
-      }
-  }
+}
 .new-box {
   background-color: var(--ownBlue);
   padding: 0.8rem 0.8rem 1.1rem 0.8rem;
@@ -127,10 +127,6 @@ export default {
   width: 75px;
 }
 
-.item {
-  position: relative;
-}
-
 .my-mt-box {
   margin-top: 14rem;
 }
@@ -174,24 +170,6 @@ export default {
   color: white;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-}
-
-
-
-@media (min-width: 1200px) { 
-    /* PREV */
-  .owl-carousel .owl-nav button.owl-prev {
-    position: absolute;
-    top: 32%;
-    left: -5rem;
-  }
-
-  /* NEXT */
-  .owl-carousel .owl-nav button.owl-next {
-    position: absolute;
-    top: 32%;
-    right: -5rem;
-  }
 }
 
 </style>
