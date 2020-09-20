@@ -1,17 +1,17 @@
 <template>
-  <div v-html="stars" class="m-3"></div>
+  <div v-html="stars" class="d-flex starRating"></div>
 </template>
 
 <script>
 export default {
-  props: {rating: Number},
+  props: { rating: Number },
   data() {
     return {
       template: "",
     };
   },
   computed: {
-    stars: function() {
+    stars: function () {
       let i = 0;
       while (i < this.rating) {
         let newStars = `<img src="/img/starRating/starSolidIcon.svg" alt="star" />`;
@@ -31,4 +31,8 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.starRating {
+  width: 95px;
+}
+</style>
