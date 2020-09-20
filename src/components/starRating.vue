@@ -4,14 +4,14 @@
 
 <script>
 export default {
-  props: {rating: Number},
+  props: { rating: Number },
   data() {
     return {
       template: "",
     };
   },
   computed: {
-    stars: function() {
+    stars: function () {
       let i = 0;
       while (i < this.rating) {
         let newStars = `<img src="/img/starRating/starSolidIcon.svg" alt="star" />`;

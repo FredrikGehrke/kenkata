@@ -7,6 +7,9 @@ import 'firebase/firestore'
 
 Vue.config.productionTip = false
 
+require('dotenv').config();
+
+// Firebase
 var firebaseConfig = {
   apiKey: "AIzaSyBXDlte8Lsft4B9iqFmjF9i-aI_PtYdS8o",
   authDomain: "kenkata-12f9b.firebaseapp.com",
@@ -21,6 +24,13 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 export const db = firebase.firestore();
+
+
+// Google Maps
+import * as VueGoogleMaps from "vue2-google-maps";
+Vue.use(VueGoogleMaps, {
+  load: { key: "AIzaSyDVXJwv8zy48DJx1C3Oj9tssruQODoil4Q" }
+});
 
 new Vue({
   router,

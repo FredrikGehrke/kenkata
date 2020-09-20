@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Shop from '../views/Shop.vue'
 import Products from '../views/Products.vue'
+import contactUs from '../views/contactUs.vue'
 import NotFound from '../views/NotFound.vue'
 
 Vue.use(VueRouter)
@@ -22,6 +23,11 @@ Vue.use(VueRouter)
     path: '/products',
     name: 'Products',
     component: Products
+  },
+  {
+    path: '/contact',
+    name: 'contactUs',
+    component: contactUs
   },
   {
     path: '*',
