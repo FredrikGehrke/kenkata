@@ -125,4 +125,8 @@ export default {
     color: black;
   }
 
+  .item {
+    position: relative;
+  }
+
 </style>
