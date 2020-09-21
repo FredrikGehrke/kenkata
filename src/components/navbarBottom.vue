@@ -21,31 +21,26 @@
                     <router-link class="nav-link" to="/">Home</router-link>
                 </li>
                 <li class="nav-item margin-menu-items">
-                    <a class="" href="/Shop">
                         <div class="dropdown nav-link">
                             <a id="categoriesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Shop <i class="fas fa-chevron-down smaller margin-link"></i>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item ml-3" href="/Shop">Show products</a>
+                                <router-link class="nav-link ml-3" to="/Shop">Shop</router-link>
                             </div>
                         </div>
-                    </a>
                 </li>
                 <li class="nav-item margin-menu-items">
-                        <a class="" href="/Products">
                             <div class="dropdown nav-link">
                                 <a id="categoriesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Products <i class="fas fa-chevron-down smaller margin-link"></i>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item ml-3" href="/Products">Product</a>
+                                    <router-link class="nav-link ml-3" to="/Products">Products</router-link>
                                 </div>
                             </div>
-                        </a>
                     </li>
                     <li class="nav-item margin-menu-items">
-                        <a class="" href="/Categories">
                             <div class="dropdown nav-link">
                                 <a id="categoriesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Categories <i class="fas fa-chevron-down smaller margin-link"></i>
@@ -56,21 +51,17 @@
                                     <a class="dropdown-item" href="#">Something else here</a>
                                 </div>
                             </div>
-                        </a>
                     </li>
                     <li class="nav-item margin-menu-items">
-                        <a class="" href="/Pages">
                             <div class="dropdown nav-link">
                                 <a id="categoriesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Pages <i class="fas fa-chevron-down smaller margin-link"></i>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <router-link class="nav-link ml-3" to="/shoppingCart">Shopping Cart</router-link>
+                                    <router-link class="nav-link ml-3" to="/contact">Contact us</router-link>
                                 </div>
                             </div>
-                        </a>
                     </li>
                     <li class="nav-item margin-menu-items">
                         <router-link class="nav-link" to="/">Blog</router-link>

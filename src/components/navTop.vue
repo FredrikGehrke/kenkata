@@ -34,8 +34,8 @@
                 <div class="white-pillar">
                     <img id="Line" class="ml-3" src="../assets/Line1.png" alt="">
                 </div>
-                <div class="mt-2 ml-3">
-                    <a href="">Contact us</a>
+                <div class="mt-2">
+                    <router-link class="ml-3" to="/contact">Contact us</router-link>
                 </div>
                 <div class="white-pillar">
                     <img id="Line" class="ml-3" src="../assets/Line1.png" alt="">
