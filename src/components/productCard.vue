@@ -1,5 +1,6 @@
 <template>
-  <div class="card rounded-top position-relative">
+    <!-- <router-link :to="{name: 'Product', params: {id: product._id}}" class="btn btn-md">Visa Produkt</router-link> -->
+  <router-link :to="{name: 'Product', params: {id: product.id}}" class="card rounded-top position-relative">
     <span class="rounded-circle padding bg-primary text-white position-absolute mark">New</span>
     <img src="../assets/guy1.png" class="card-img-top img-fluid" alt="...">
     <div class="buttons position-absolute d-flex flex-column p-2 rounded-pill align-items-center">
@@ -9,24 +10,23 @@
       <i class="far fa-heart py-1 pt-2 grey"></i>
       <i class="fas fa-random py-1 grey"></i>
       <i class="fas fa-search py-1 grey"></i>
-      <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="fas fa-shopping-cart py-1 grey"></i></a>    
+      <a href="#" id="#tooltip2" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="fas fa-shopping-cart py-1 grey"></i></a>    
     </div>
 
   <div class="card-bodyy pl-3 pt-2 rounded-bottom position-absolute">
-    
     <div class="card-text text-white">
       <p>{{ product.short }}</p>
       <!-- <p class="mt-1 border d-inline-block px-2 small">Fashion</p> -->
       <!-- <tag :text="'Fashion'" /> -->
       <p class="small text-decoration-line-through">$220.00</p>
       <p class="my-blue-color font-weight-bold">$190.00</p>
-      <starRating rating="3" class="starRating" />
+      <starRating :rating="3" class="starRating" />
     </div>
   </div>
   <div class="card-body position-absolute">
 
   </div>
-</div>
+</router-link>
 
 </template>
 
