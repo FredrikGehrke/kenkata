@@ -4,7 +4,7 @@ $(document).ready(function () {
 
   // Enables tooltip
   $('[data-toggle="tooltip"]').tooltip();
-//   $('[div]').tooltip();
+//   $('[div]').tooltip(); TESTA DENNA IST. 
 
   // $('.fa-shopping-cart').data('tooltip-custom-class', 'tooltip-cart').tooltip();
   // $('.fas fa-circle').data('tooltip-custom-class', 'tooltip-circle').tooltip();
