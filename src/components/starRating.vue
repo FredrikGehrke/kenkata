@@ -1,5 +1,5 @@
 <template>
-  <div v-html="stars" class="m-3"></div>
+  <div v-html="stars" class="d-flex starRating"></div>
 </template>
 
 <script>
@@ -31,4 +31,8 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.starRating {
+  width: 95px;
+}
+</style>

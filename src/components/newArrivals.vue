@@ -2,17 +2,20 @@
   <div>
     <div class="container pl-0 pr-0 pb-5">
       <div class="row">
-          <div class="col-12">
-              <div class="d-flex flex-row justify-content-center text-center">
-                  <h1 class="pr-2 font-weight-bold">NEW <span class="my-blue-color">ARRIVALS</span></h1>
-              </div>
-              <div class="d-flex justify-content-center">
-                  <img src="../assets/wave.png" alt="">
-              </div>
-              <div class="d-flex justify-content-center pt-3 text-center">
-                  <p>Check out our latest products from top fashion designers</p>
-              </div>
+        <div class="col-12">
+          <div class="d-flex flex-row justify-content-center text-center">
+            <h1 class="pr-2 font-weight-bold">
+              NEW
+              <span class="my-blue-color">ARRIVALS</span>
+            </h1>
           </div>
+          <div class="d-flex justify-content-center">
+            <img src="../assets/wave.png" alt />
+          </div>
+          <div class="d-flex justify-content-center pt-3 text-center">
+            <p>Check out our latest products from top fashion designers</p>
+          </div>
+        </div>
       </div>
 
       <carousel v-if="products" class="carousel mx-auto position-relative" :margin="15" :autoplay="true" :nav="false" :autoplayHoverPause="true" :responsive="{0:{items:1}, 768:{items:3}}"> 
@@ -143,9 +146,9 @@ export default {
   height: 112%;
   width: 100%;
 }
-    /* hover */
+/* hover */
 .hover-me:hover + .my-show {
-    display: block;
+  display: block;
 }
 .hover-me:hover + .new-box {
   display: none;
@@ -163,7 +166,7 @@ export default {
   border-top-right-radius: 5px;
 }
 
-.bgCBlue{
+.bgCBlue {
   background-color: #0e153d;
   padding: 0.5rem;
   padding-left: 1rem;
