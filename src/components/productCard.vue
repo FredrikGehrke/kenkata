@@ -1,44 +1,61 @@
 <template>
   <div class="card rounded-top position-relative">
-    <span class="rounded-circle padding bg-primary text-white position-absolute mark">New</span>
-    <img src="../assets/guy1.png" class="card-img-top img-fluid" alt="...">
+    <span
+      v-if="product.badge[0]"
+      class="rounded-circle badge-size bg-danger text-white position-absolute mark d-flex justify-content-center align-items-center"
+    >{{product.badge[0]}}</span>
+    <span
+      v-if="product.badge[1]"
+      class="rounded-circle badge-size bg-success margin-topp-badge-2 text-white position-absolute mark d-flex justify-content-center align-items-center"
+    >{{product.badge[1]}}</span>
+    <img :src="product.img" class="card-img-top img-fluid" alt="..." />
     <div class="buttons position-absolute d-flex flex-column p-2 rounded-pill align-items-center">
-      <a href="#" data-placement="left" data-html="true" data-toggle="tooltip" title="<i class='fas fa-circle circle-green mr-1'></i><i class='fas fa-circle circle-purple mr-1'></i><i class='fas fa-circle circle-red mr-1'></i><i class='fas fa-circle circle-black'></i>">
+      <a
+        href="#"
+        data-placement="left"
+        data-html="true"
+        data-toggle="tooltip"
+        title="<i class='fas fa-circle circle-green mr-1'></i><i class='fas fa-circle circle-purple mr-1'></i><i class='fas fa-circle circle-red mr-1'></i><i class='fas fa-circle circle-black'></i>"
+      >
         <i class="fas fa-circle red mt-2"></i>
       </a>
       <i class="far fa-heart py-1 pt-2 grey"></i>
       <i class="fas fa-random py-1 grey"></i>
       <i class="fas fa-search py-1 grey"></i>
-      <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="fas fa-shopping-cart py-1 grey"></i></a>    
+      <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart">
+        <i class="fas fa-shopping-cart py-1 grey"></i>
+      </a>
     </div>
 
-  <div class="card-bodyy pl-3 pt-2 rounded-bottom position-absolute">
-    
-    <div class="card-text text-white">
-      <p>{{ product.short }}</p>
-      <!-- <p class="mt-1 border d-inline-block px-2 small">Fashion</p> -->
-      <!-- <tag :text="'Fashion'" /> -->
-      <p class="small text-decoration-line-through">$220.00</p>
-      <p class="my-blue-color font-weight-bold">$190.00</p>
-      <starRating rating="3" class="starRating" />
+    <div class="card-bodyy pl-3 pt-2 rounded-bottom position-absolute">
+      <div class="card-text text-white">
+        <p class="pb-4">{{ product.short }}</p>
+        <!-- <p class="mt-1 border d-inline-block px-2 small">Fashion</p> -->
+        <!-- <tag :text="'Fashion'" /> -->
+        <p v-if="product.sale.price" class="small text-decoration-line-through">{{product.price}}:-</p>
+        <p v-if="product.sale.price" class="my-blue-color font-weight-bold">{{product.sale.price}}:-</p>
+        <p
+          v-if="!product.sale.price"
+          class="my-blue-color padding-bottom-fix font-weight-bold"
+        >{{product.price}}:-</p>
+        <starRating :rewiews="product.rewiews" class="starRating" />
+      </div>
     </div>
+    <div class="card-body position-absolute"></div>
   </div>
-  <div class="card-body position-absolute">
-
-  </div>
-</div>
-
 </template>
 
 <script>
 import starRating from "@/components/starRating.vue";
 export default {
+  props: {
+    product: Object,
+  },
   components: {
     // tag
-    starRating
+    starRating,
   },
-  props: ['product']
-
+  props: ["product"],
 };
 </script>
 
@@ -53,8 +70,9 @@ export default {
   text-decoration: line-through;
 }
 
-.padding {
-  padding: 1em 0.8em;
+.badge-size {
+  height: 48px;
+  width: 48px;
 }
 .card {
   overflow: hidden;
@@ -63,6 +81,12 @@ export default {
     position: absolute;
     right: 20px;
     bottom: 20px;
+  }
+  .padding-bottom-fix {
+    padding-bottom: 36px;
+  }
+  .margin-topp-badge-2 {
+    margin-top: 56px;
   }
   &:hover {
     .card-body {

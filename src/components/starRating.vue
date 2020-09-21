@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  props: { rating: Number },
+  props: { rewiews: Array },
   data() {
     return {
       template: "",
@@ -12,20 +12,33 @@ export default {
   },
   computed: {
     stars: function () {
-      let i = 0;
-      while (i < this.rating) {
-        let newStars = `<img src="/img/starRating/starSolidIcon.svg" alt="star" />`;
-        this.template = this.template + newStars;
-        i++;
+      if (this.rewiews) {
+        let totalRatingValue = 0;
+        let numberOfRatings = 0;
+
+        this.rewiews.forEach((review) => {
+          totalRatingValue = totalRatingValue + review.rating;
+          numberOfRatings++;
+        });
+
+        const averageRatingValue = totalRatingValue / numberOfRatings;
+        const rating = Math.round(averageRatingValue);
+
+        let i = 0;
+        while (i < rating) {
+          let newStars = `<img src="/img/starRating/starSolidIcon.svg" alt="star" />`;
+          this.template = this.template + newStars;
+          i++;
+        }
+        let outlinedStars = 5 - rating;
+        i = 0;
+        while (i < outlinedStars) {
+          let newOutlinedStars = `<img src="/img/starRating/starOutlineIcon.svg" alt="star" />`;
+          this.template = this.template + newOutlinedStars;
+          i++;
+        }
+        return this.template;
       }
-      let outlinedStars = 5 - this.rating;
-      i = 0;
-      while (i < outlinedStars) {
-        let newOutlinedStars = `<img src="/img/starRating/starOutlineIcon.svg" alt="star" />`;
-        this.template = this.template + newOutlinedStars;
-        i++;
-      }
-      return this.template;
     },
   },
 };

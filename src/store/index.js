@@ -24,6 +24,7 @@ export default new Vuex.Store({
         product.id = doc.id;
         products.push(product);
       })
+      console.log(products)
       commit('SET_PRODUCTS', products)
     }
   },
