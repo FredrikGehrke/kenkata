@@ -1,28 +1,28 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import Shop from '../views/Shop.vue'
-import Products from '../views/Products.vue'
-import contactUs from '../views/contactUs.vue'
-import NotFound from '../views/NotFound.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
+import Shop from "../views/Shop.vue";
+import Products from "../views/Products.vue";
+import NotFound from "../views/NotFound.vue";
+import ShoppingCart from "../views/ShoppingCart.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
-  const routes = [
+const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
-    path: '/shop',
-    name: 'Shop',
-    component: Shop
+    path: "/shop",
+    name: "Shop",
+    component: Shop,
   },
   {
-    path: '/products',
-    name: 'Products',
-    component: Products
+    path: "/products",
+    name: "Products",
+    component: Products,
   },
   {
     path: '/contact',
@@ -34,12 +34,17 @@ Vue.use(VueRouter)
     name: 'NotFound',
     component: NotFound
   },
-]
+  {
+    path: "/shoppingCart",
+    name: "shoppingCart",
+    component: ShoppingCart,
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
