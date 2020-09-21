@@ -1,10 +1,10 @@
 <template>
 <div>
-    <div class="container pl-0 pr-0 pb-5">
+    <div class="container pl-0 pr-0 pb-5 mt-5 pt-3">
         <div class="row">
             <div class="col-12">
                 <div class="d-flex flex-row justify-content-center text-center">
-                    <h1 class="pr-2 font-weight-bold">FEATURED <span class="my-blue-color">PRODUCTS</span></h1>
+                    <h1 class="pr-2 font-weight-bold">YOU MAY <span class="my-blue-color">ALSO LIKE</span></h1>
                 </div>
                 <div class="d-flex justify-content-center">
                     <img src="@/assets/wave.png" alt="">
@@ -30,7 +30,7 @@
 <script>
 import carousel from 'vue-owl-carousel'
 import { mapGetters } from 'vuex'
-import productCard from './productCard'
+import productCard from '../productCard'
 export default {
     components: {
         carousel,

@@ -14,260 +14,73 @@
               </div>
           </div>
       </div>
-      <div class="owl-container pt-3">
-        <div class="owl-carousel owl-theme owl-loaded owl-drag">
-          <div class="owl-stage-outer">
-            <div class="owl-stage">
-              <div class="owl-item">
-                <div class="item">
-                  <img class="bg-grey hover-me" src="../assets/guy1.png" alt="">
-                  <div class="new-box white">
-                    <p class="mb-0 pt-p">NEW</p>
-                  </div>
-                  <div class="my-show white pl-3">
-                    <div class="d-flex">
-                      <div class="my-mt-box mr-auto ">
-                        <p class="mb-2">Blue sils flare sleeved top</p>
-                        <p class="border pl-2 my-width-p">Fashion</p>
-                        <p class="line-through mb-2">$190.00</p>
-                        <h4 class="my-blue-color">$170.00</h4>
-                      </div>
-                      <div class="mr-4 mt-4 ml-5 white-bg">
-                        <i class="fas fa-circle bigger-red mt-2 d-flex"></i>
-                        <i class="far fa-heart bigger mt-2 grey d-flex"></i>
-                        <i class="fas fa-random bigger mt-2 grey d-flex"></i>
-                        <i class="fas fa-search bigger mt-2 grey d-flex"></i>
-                        <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="fas fa-shopping-cart mt-2 grey bigger d-flex"></i></a>                                             
-                      </div>
-                    </div>
-                  </div>                  
-                  <p class="bgCBlue">Blue silk flare sleeved top</p>
-                </div>
-              </div>
-              <div class="owl-item">
-                <div class="item">
-                  <img class="bg-grey hover-me" src="../assets/guy2.png" alt="">
-                  <div class="new-box white">
-                    <p class="mb-0 pt-p">NEW</p>
-                  </div>                      
-                  <div class="my-show white pl-3">
-                    <div class="d-flex">
-                      <div class="my-mt-box mr-auto ">
-                        <p class="mb-2">New looks men's coat</p>
-                        <p class="border pl-2 my-width-p">Fashion</p>
-                        <p class="line-through mb-2">$220.00</p>
-                        <h4 class="my-blue-color">$190.00</h4>
-                      </div>
-                      <div class="mr-4 mt-4 white-bg">
-                        <i class="fas fa-circle bigger-red mt-2 d-flex"></i>
-                        <i class="far fa-heart bigger mt-2 grey d-flex"></i>
-                        <i class="fas fa-random bigger mt-2 grey d-flex"></i>
-                        <i class="fas fa-search bigger mt-2 grey d-flex"></i>
-                        <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="fas fa-shopping-cart mt-2 grey bigger d-flex"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="bgCBlue">New looks men's coat</p>
-                </div>
-              </div>
-              <div class="owl-item">
-                <div class="item">
-                  <img class="bg-grey hover-me" src="../assets/guy3.png" alt="">
-                  <div class="new-box white">
-                    <p class="mb-0 pt-p">NEW</p>
-                  </div>                      
-                  <div class="my-show white pl-3">
-                    <div class="d-flex">
-                      <div class="my-mt-box mr-auto ">
-                        <p class="mb-2">Circle pattern girls shirt</p>
-                        <p class="border pl-2 my-width-p">Fashion</p>
-                        <p class="line-through mb-2">$200.00</p>
-                        <h4 class="my-blue-color">$150.00</h4>
-                      </div>
-                      <div class="mr-4 mt-4 white-bg">
-                        <i class="fas fa-circle bigger-red mt-2 d-flex"></i>
-                        <i class="far fa-heart bigger mt-2 grey d-flex"></i>
-                        <i class="fas fa-random bigger mt-2 grey d-flex"></i>
-                        <i class="fas fa-search bigger mt-2 grey d-flex"></i>
-                        <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="fas fa-shopping-cart mt-2 grey bigger d-flex"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="bgCBlue">Circle pattern girls shirt</p>
-                </div>
-              </div>
-              <div class="owl-item">
-                <div class="item">
-                  <img class="bg-grey hover-me" src="../assets/guy1.png" alt="">
-                  <div class="new-box white">
-                    <p class="mb-0 pt-p">NEW</p>
-                  </div>
-                  <div class="my-show white pl-3">
-                    <div class="d-flex">
-                      <div class="my-mt-box mr-auto ">
-                        <p class="mb-2">Blue sils flare sleeved top</p>
-                        <p class="border pl-2 my-width-p">Fashion</p>
-                        <p class="line-through mb-2">$190.00</p>
-                        <h4 class="my-blue-color">$170.00</h4>
-                      </div>
-                      <div class="mr-4 mt-4 ml-5 white-bg">
-                        <i class="fas fa-circle bigger-red mt-2 d-flex"></i>
-                        <i class="far fa-heart bigger mt-2 grey d-flex"></i>
-                        <i class="fas fa-random bigger mt-2 grey d-flex"></i>
-                        <i class="fas fa-search bigger mt-2 grey d-flex"></i>
-                        <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="fas fa-shopping-cart mt-2 grey bigger d-flex"></i></a>                                             
-                      </div>
-                    </div>
-                  </div>                  
-                  <p class="bgCBlue">Blue silk flare sleeved top</p>
-                </div>
-              </div>
-              <div class="owl-item">
-                <div class="item">
-                  <img class="bg-grey hover-me" src="../assets/guy2.png" alt="">
-                  <div class="new-box white">
-                    <p class="mb-0 pt-p">NEW</p>
-                  </div>                      
-                  <div class="my-show white pl-3">
-                    <div class="d-flex">
-                      <div class="my-mt-box mr-auto ">
-                        <p class="mb-2">New looks men's coat</p>
-                        <p class="border pl-2 my-width-p">Fashion</p>
-                        <p class="line-through mb-2">$220.00</p>
-                        <h4 class="my-blue-color">$190.00</h4>
-                      </div>
-                      <div class="mr-4 mt-4 white-bg">
-                        <i class="fas fa-circle bigger-red mt-2 d-flex"></i>
-                        <i class="far fa-heart bigger mt-2 grey d-flex"></i>
-                        <i class="fas fa-random bigger mt-2 grey d-flex"></i>
-                        <i class="fas fa-search bigger mt-2 grey d-flex"></i>
-                        <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="fas fa-shopping-cart mt-2 grey bigger d-flex"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="bgCBlue">New looks men's coat</p>
-                </div>
-              </div>
-              <div class="owl-item">
-                <div class="item">
-                  <img class="bg-grey hover-me" src="../assets/guy3.png" alt="">
-                  <div class="new-box white">
-                    <p class="mb-0 pt-p">NEW</p>
-                  </div>                      
-                  <div class="my-show white pl-3">
-                    <div class="d-flex">
-                      <div class="my-mt-box mr-auto ">
-                        <p class="mb-2">Circle pattern girls shirt</p>
-                        <p class="border pl-2 my-width-p">Fashion</p>
-                        <p class="line-through mb-2">$200.00</p>
-                        <h4 class="my-blue-color">$150.00</h4>
-                      </div>
-                      <div class="mr-4 mt-4 white-bg">
-                        <i class="fas fa-circle bigger-red mt-2 d-flex"></i>
-                        <i class="far fa-heart bigger mt-2 grey d-flex"></i>
-                        <i class="fas fa-random bigger mt-2 grey d-flex"></i>
-                        <i class="fas fa-search bigger mt-2 grey d-flex"></i>
-                        <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="fas fa-shopping-cart mt-2 grey bigger d-flex"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="bgCBlue">Circle pattern girls shirt</p>
-                </div>
-              </div>
-              <div class="owl-item active">
-                <div class="item">
-                  <img class="bg-grey hover-me" src="../assets/guy1.png" alt="">
-                  <div class="new-box white">
-                    <p class="mb-0 pt-p">NEW</p>
-                  </div>
-                  <div class="my-show white pl-3">
-                    <div class="d-flex">
-                      <div class="my-mt-box mr-auto ">
-                        <p class="mb-2">Blue sils flare sleeved top</p>
-                        <p class="border pl-2 my-width-p">Fashion</p>
-                        <p class="line-through mb-2">$190.00</p>
-                        <h4 class="my-blue-color">$170.00</h4>
-                      </div>
-                      <div class="mr-4 mt-4 ml-5 white-bg">
-                        <i class="fas fa-circle bigger-red mt-2 d-flex"></i>
-                        <i class="far fa-heart bigger mt-2 grey d-flex"></i>
-                        <i class="fas fa-random bigger mt-2 grey d-flex"></i>
-                        <i class="fas fa-search bigger mt-2 grey d-flex"></i>
-                        <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="fas fa-shopping-cart mt-2 grey bigger d-flex"></i></a>                                             
-                      </div>
-                    </div>
-                  </div>                  
-                  <p class="bgCBlue">Blue silk flare sleeved top</p>
-                </div>
-              </div>
-              <div class="owl-item active">
-                <div class="item">
-                  <img class="bg-grey hover-me" src="../assets/guy2.png" alt="">
-                  <div class="new-box white">
-                    <p class="mb-0 pt-p">NEW</p>
-                  </div>                      
-                  <div class="my-show white pl-3">
-                    <div class="d-flex">
-                      <div class="my-mt-box mr-auto ">
-                        <p class="mb-2">New looks men's coat</p>
-                        <p class="border pl-2 my-width-p">Fashion</p>
-                        <p class="line-through mb-2">$220.00</p>
-                        <h4 class="my-blue-color">$190.00</h4>
-                      </div>
-                      <div class="mr-4 mt-4 white-bg">
-                        <i class="fas fa-circle bigger-red mt-2 d-flex"></i>
-                        <i class="far fa-heart bigger mt-2 grey d-flex"></i>
-                        <i class="fas fa-random bigger mt-2 grey d-flex"></i>
-                        <i class="fas fa-search bigger mt-2 grey d-flex"></i>
-                        <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="fas fa-shopping-cart mt-2 grey bigger d-flex"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="bgCBlue">New looks men's coat</p>
-                </div>
-              </div>
-              <div class="owl-item active">
-                <div class="item">
-                  <img class="bg-grey hover-me" src="../assets/guy3.png" alt="">
-                  <div class="new-box white">
-                    <p class="mb-0 pt-p">NEW</p>
-                  </div>                      
-                  <div class="my-show white pl-3">
-                    <div class="d-flex">
-                      <div class="my-mt-box mr-auto ">
-                        <p class="mb-2">Circle pattern girls shirt</p>
-                        <p class="border pl-2 my-width-p">Fashion</p>
-                        <p class="line-through mb-2">$200.00</p>
-                        <h4 class="my-blue-color">$150.00</h4>
-                      </div>
-                      <div class="mr-4 mt-4 white-bg">
-                        <i class="fas fa-circle bigger-red mt-2 d-flex"></i>
-                        <i class="far fa-heart bigger mt-2 grey d-flex"></i>
-                        <i class="fas fa-random bigger mt-2 grey d-flex"></i>
-                        <i class="fas fa-search bigger mt-2 grey d-flex"></i>
-                        <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="fas fa-shopping-cart mt-2 grey bigger d-flex"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="bgCBlue">Circle pattern girls shirt</p>
-                </div>
-              </div>
-            </div>
-          </div>                
-        </div>
-      </div>
+
+      <carousel v-if="products" class="carousel mx-auto position-relative" :margin="15" :autoplay="true" :nav="false" :autoplayHoverPause="true" :responsive="{0:{items:1}, 768:{items:3}}"> 
+
+        <productCard class="w-auto" v-for="product in products" :key="product.id" :product="product" />
+
+
+      <template slot="next">
+        <span class="next position-absolute border px-3 rounded-circle d-none d-lg-block"><i class="fas fa-angle-right"></i></span>
+      </template>
+      <template slot="prev">
+        <span class="prev position-absolute border px-3 rounded-circle d-none d-lg-block"><i class="fas fa-angle-left"></i></span>
+      </template>
+    </carousel>
+
+
+
     </div>
   </div>
 </template>
 
 <script>
+import carousel from 'vue-owl-carousel'
+import { mapGetters } from 'vuex'
+import productCard from './productCard'
 export default {
-
+  components: {
+    carousel,
+    productCard
+  },
+  computed: {
+    ...mapGetters(['products'])
+  },
+  mounted() {
+    
+  }
 }
 </script>
 
-<style>
+<style lang="scss">
 
+.next {
+  font-size: 2em;
+  color: #E3E3E3;
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  right: -55px;
+  z-index: 10;
+    &:hover {
+    background-color: #20D3C2;
+    color: #fff;
+  }
+}
+.prev {
+  font-size: 2em;
+  color: #E3E3E3;
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  left: -55px;
+  z-index: 10;
+    
+    &:hover {
+      background-color: #20D3C2;
+      color: #fff;
+    }
+}
 .new-box {
   background-color: var(--ownBlue);
   padding: 0.8rem 0.8rem 1.1rem 0.8rem;
@@ -314,10 +127,6 @@ export default {
   width: 75px;
 }
 
-.item {
-  position: relative;
-}
-
 .my-mt-box {
   margin-top: 14rem;
 }
@@ -361,24 +170,6 @@ export default {
   color: white;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-}
-
-
-
-@media (min-width: 1200px) { 
-    /* PREV */
-  .owl-carousel .owl-nav button.owl-prev {
-    position: absolute;
-    top: 32%;
-    left: -5rem;
-  }
-
-  /* NEXT */
-  .owl-carousel .owl-nav button.owl-next {
-    position: absolute;
-    top: 32%;
-    right: -5rem;
-  }
 }
 
 </style>
