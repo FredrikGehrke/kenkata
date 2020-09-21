@@ -5,6 +5,8 @@ import Shop from "../views/Shop.vue";
 import Products from "../views/Products.vue";
 import NotFound from "../views/NotFound.vue";
 import ShoppingCart from "../views/ShoppingCart.vue";
+import contactUs from '../views/contactUs.vue'
+
 
 Vue.use(VueRouter);
 
