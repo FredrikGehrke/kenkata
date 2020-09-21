@@ -69,9 +69,6 @@ button {
   color: white !important;
 }
 
-.tooltip2-inner {
-  background-color: white;
-}
 .tooltip.bs-tooltip-left .arrow:before {
   border-right-color: var(--ownBlue) !important;
 }
