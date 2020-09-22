@@ -7,7 +7,7 @@ $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip()
   })
 
-  // $('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle="tooltip"]').tooltip()
   // $('#tooltip2').tooltip(); 
 
   // $('.fa-shopping-cart').data('tooltip-custom-class', 'tooltip-cart').tooltip();

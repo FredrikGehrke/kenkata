@@ -1,6 +1,6 @@
 <template>
     <!-- <router-link :to="{name: 'Product', params: {id: product._id}}" class="btn btn-md">Visa Produkt</router-link> -->
-  <router-link :to="{name: 'Product', params: {id: product.id}}" class="card rounded-top position-relative">
+  <router-link :to="{name: 'product', params: {id: product.id}}" class="card rounded-top position-relative">
     <span class="rounded-circle padding bg-primary text-white position-absolute mark">New</span>
     <img src="../assets/guy1.png" class="card-img-top img-fluid" alt="...">
     <div class="buttons position-absolute d-flex flex-column p-2 rounded-pill align-items-center">
@@ -10,7 +10,7 @@
       <i class="far fa-heart py-1 pt-2 grey"></i>
       <i class="fas fa-random py-1 grey"></i>
       <i class="fas fa-search py-1 grey"></i>
-      <a href="#" id="#tooltip2" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="fas fa-shopping-cart py-1 grey"></i></a>    
+      <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="fas fa-shopping-cart py-1 grey toolTest"></i></a>    
     </div>
 
   <div class="card-bodyy pl-3 pt-2 rounded-bottom position-absolute">
