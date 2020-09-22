@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="col-6">
         <h1>Register</h1>
         <p>Registering for this site allows you to access your order status and history. Just fill in the fields below, and we’ll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
     <form>

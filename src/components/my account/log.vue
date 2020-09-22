@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="col-6">
     <h1>Login</h1>
     
       <form class="px-4 py-3">

@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Shop from '../views/Shop.vue'
 import Products from '../views/Products.vue'
 import NotFound from '../views/NotFound.vue'
+import MyAccount from '../views/MyAccount.vue'
 
 Vue.use(VueRouter)
 
@@ -22,6 +23,11 @@ Vue.use(VueRouter)
     path: '/products',
     name: 'Products',
     component: Products
+  },
+  {
+    path: '/my-account',
+    name: 'My Account',
+    component: MyAccount
   },
   {
     path: '*',
