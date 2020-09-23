@@ -1,5 +1,8 @@
 <template>
-  <div class="card rounded-top position-relative">
+  <router-link
+    :to="{name: 'products', params: {id: product.id}}"
+    class="card rounded-top position-relative"
+  >
     <span
       v-if="product.badge[0]"
       class="rounded-circle badge-size bg-danger text-white position-absolute mark d-flex justify-content-center align-items-center"
@@ -9,6 +12,7 @@
       class="rounded-circle badge-size bg-success margin-topp-badge-2 text-white position-absolute mark d-flex justify-content-center align-items-center"
     >{{product.badge[1]}}</span>
     <img :src="product.img" class="card-img-top img-fluid" alt="..." />
+
     <div class="buttons position-absolute d-flex flex-column p-2 rounded-pill align-items-center">
       <a
         href="#"
@@ -22,7 +26,12 @@
       <i class="far fa-heart py-1 pt-2 grey"></i>
       <i class="fas fa-random py-1 grey"></i>
       <i class="fas fa-search py-1 grey"></i>
-      <a v-on:click="addProduct" data-toggle="tooltip" data-placement="left" title="Add to cart">
+      <a
+        v-on:click.prevent="addProduct"
+        data-toggle="tooltip"
+        data-placement="left"
+        title="Add to cart"
+      >
         <i class="fas fa-shopping-cart py-1 grey"></i>
       </a>
     </div>
@@ -42,20 +51,15 @@
       </div>
     </div>
     <div class="card-body position-absolute"></div>
-  </div>
+  </router-link>
 </template>
 
 <script>
 import starRating from "@/components/starRating.vue";
+
 export default {
   props: { product: Object },
-  // data() {
-  //   return {
-  //     quantity: 1
-  //   }
-  // },
   components: {
-    // tag
     starRating,
   },
   methods: {

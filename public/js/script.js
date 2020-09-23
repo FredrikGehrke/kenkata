@@ -3,8 +3,12 @@ $(document).ready(function () {
   AOS.init();
 
   // Enables tooltip
-  $('[data-toggle="tooltip"]').tooltip();
-//   $('[div]').tooltip(); TESTA DENNA IST. 
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  $('[data-toggle="tooltip"]').tooltip()
+  // $('#tooltip2').tooltip(); 
 
   // $('.fa-shopping-cart').data('tooltip-custom-class', 'tooltip-cart').tooltip();
   // $('.fas fa-circle').data('tooltip-custom-class', 'tooltip-circle').tooltip();
