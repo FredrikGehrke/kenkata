@@ -22,7 +22,7 @@
       <i class="far fa-heart py-1 pt-2 grey"></i>
       <i class="fas fa-random py-1 grey"></i>
       <i class="fas fa-search py-1 grey"></i>
-      <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart">
+      <a v-on:click="addProduct" data-toggle="tooltip" data-placement="left" title="Add to cart">
         <i class="fas fa-shopping-cart py-1 grey"></i>
       </a>
     </div>
@@ -48,14 +48,24 @@
 <script>
 import starRating from "@/components/starRating.vue";
 export default {
-  props: {
-    product: Object,
-  },
+  props: { product: Object },
+  // data() {
+  //   return {
+  //     quantity: 1
+  //   }
+  // },
   components: {
     // tag
     starRating,
   },
-  props: ["product"],
+  methods: {
+    addProduct: function () {
+      this.$store.dispatch("addProductToCart", {
+        product: this.product,
+        quantity: 1,
+      });
+    },
+  },
 };
 </script>
 
