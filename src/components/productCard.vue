@@ -1,6 +1,6 @@
 <template>
     <!-- <router-link :to="{name: 'Product', params: {id: product._id}}" class="btn btn-md">Visa Produkt</router-link> -->
-  <router-link :to="{name: 'product', params: {id: product.id}}" class="card rounded-top position-relative">
+  <router-link :to="{name: 'products', params: {id: product.id}}" class="card rounded-top position-relative">
     <span class="rounded-circle padding bg-primary text-white position-absolute mark">New</span>
     <img src="../assets/guy1.png" class="card-img-top img-fluid" alt="...">
     <div class="buttons position-absolute d-flex flex-column p-2 rounded-pill align-items-center">
