@@ -41,14 +41,21 @@
                         <i class="fas fa-random mr-3 icon-size relativeShuffle"></i>
                         <span class="badge badge-pill my-blue white absoluteShuffle">0</span>
                     </div>
-                    <div class="my-pt-icons ml-4 my-width">
-                        <i class="fas fa-shopping-bag icon-size "></i> $0.00
-                        <span class="badge badge-pill my-blue white absoluteCart">0</span>
+
+
+                    <div class="nav-item dropdown">
+                        <div class="my-pt-icons ml-4 my-width" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-shopping-bag icon-size "></i> $0.00 <!-- {{ shoppingCartTotal }}-->
+                            <span class="badge badge-pill my-blue white absoluteCart">0</span> <!-- {{ shoppingCartTotalAmount }}-->
+                        </div>
+
+                        <div class="dropdown-menu dropdown-menu-right z-depth-2 shopping-cart p-0">
+                            <shoppingCart />
+                        </div>
                     </div>
-                    <!-- <div class="my-pt-icons ml-4">
-                        <i class="fas fa-shopping-bag icon-size"></i>$0.00
-                        <span class="badge badge-pill my-blue white absoluteCart">0</span>
-                    </div> -->
+
+
+
                 </div>
 
             </div>
@@ -58,12 +65,21 @@
 </template>
 
 <script>
-export default {
+import shoppingCart from './shoppingcart/ShoppingCart.vue'
 
+export default {
+    name: 'Navbar Middle',
+    components: {
+        shoppingCart,
+    },
 }
 </script>
 
 <style scoped>
+
+.shopping-cart {
+    min-width: 450px;
+}
 
 .text-size {
     font-size: 14px;
