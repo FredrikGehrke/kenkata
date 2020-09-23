@@ -51,6 +51,11 @@ export default {
         productToAdjust.quantity ++
       } else if (adjustment === "-1") {
         productToAdjust.quantity --
+        if (productToAdjust.quantity <= 0) {
+          state.cart = state.cart.filter(item => {
+            return item.product.id !== id;
+          });
+        }
       } else {
         state.cart = state.cart.filter(item => {
           return item.product.id !== id;

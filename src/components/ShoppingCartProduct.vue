@@ -6,7 +6,7 @@
     <div class="img-box rounded d-none d-xl-block">
       <img class="img-fluid" :src="item.product.img" alt="Product image" />
     </div>
-    <p class="m-0 ml-1 name">{{item.product.short}}kr</p>
+    <p class="m-0 ml-1 name">{{item.product.short}}</p>
     <p v-if="!item.product.sale.sale" class="price m-0 price">{{item.product.price}}kr</p>
     <p v-if="item.product.sale.sale" class="price m-0 price">{{item.product.sale.price}}kr</p>
     <div class="quantity-buttons d-flex align-items-center mx-4">
