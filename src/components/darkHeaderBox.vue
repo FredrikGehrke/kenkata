@@ -23,13 +23,15 @@ h2.dark-header{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     text-align: center;
+    margin-bottom: 0;
 }
 
 .dotted-box{
     padding: 1.875rem;
     padding-top: 1.5rem;
-    border: dashed 2px #0E153D;
+    border: dashed 2px var(--darkerBlue);
     border-top: none;
+    border-radius: 0 0 0.375rem 0.375rem;
 }
 
 .highlight{

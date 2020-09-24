@@ -1,6 +1,5 @@
 <template>
 <div class="container">
-  <div class="col-6">hhh</div>
   <yourOrder />
 </div>
   
