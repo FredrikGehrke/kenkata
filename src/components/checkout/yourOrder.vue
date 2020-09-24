@@ -9,13 +9,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="product in products" :key="product.id" class="d-flex justify-content-between">
+          <tr v-for="product in shoppingCart" :key="product.id" class="d-flex justify-content-between">
             <td>{{ product.name }}</td>
             <td>${{ product.price.toFixed(2) }}</td>
           </tr>
           <tr class="highlight d-flex justify-content-between">
             <td>Subtotal</td>
-            <td>${{ getSubtotal(products).toFixed(2) }}</td>
+            <td>${{ shoppingCartTotal }}</td>
           </tr>
           <tr class="d-flex justify-content-between align-items-center">
             <td>Shipping</td>
@@ -62,7 +62,7 @@
         <tfoot>
           <tr class="d-flex justify-content-between">
             <td>TOTAL</td>
-            <td>${{ (shippingOptions[shipping] + getSubtotal(products)).toFixed(2) }}</td>
+            <td>$shipping options</td>
           </tr>
         </tfoot>
       </table>
@@ -169,7 +169,6 @@ export default {
   components: {
     darkHeaderBox,
   },
-  props: ["products"],
   methods: {
     getSubtotal: (products) => {
     let subtotal = 0;
@@ -180,7 +179,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getProducts'])
+    ...mapGetters(['shoppingCart', 'shoppingCartTotal'])
   },
   data() { 
     return {
@@ -189,6 +188,7 @@ export default {
         flatrate: 20.0,
         pickup: 25.0,
       },
+      shipping: "",
     }
   },
 };

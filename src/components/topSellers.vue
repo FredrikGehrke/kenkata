@@ -147,29 +147,22 @@
 
 <script>
 export default {
-
 }
 </script>
 
 <style scoped>
-
-
 .my-minus-margin {
     margin-top: -1.7rem;
 }
-
 .my-mt-box {
     margin-top: 12rem;
 }
-
 .my-mt-boxBig {
     margin-top: 34rem;
 }
-
 /* .height {
     height: 110%;
 } */
-
     /* hover */
 .hover-me:hover + .my-show {
     display: block;
@@ -183,11 +176,14 @@ export default {
 .hover-me:hover + .new-box + .my-show + p {
     display: block;
 }
-
 .new-box {
     padding: 0.8rem 0.8rem 1.1rem 0.8rem;
     border-radius: 10px;
     background: white;
+}
+
+.item {
+    position: relative;
 }
 
 .my-show {
@@ -202,7 +198,6 @@ export default {
     height: 100%;
     width: 100%;
 }
-
 .bgCBlue{
     background-color: #0e153de5;
     padding: 0.5rem;
@@ -211,9 +206,6 @@ export default {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-
-
-
 .grid-layout {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -221,21 +213,17 @@ export default {
     grid-auto-flow: dense;
     padding: 15px;
 }
-
 /* .grid-item {
     padding: 1rem;
 } */
-
 .span-2 {
     grid-column-end: span 2;
     grid-row-end: span 2;
 }
-
 .span-3 {
     grid-column-end: span 2;
     grid-row-end: span 4;
 }
-
 @media (min-width: 576px) {
     .grid-layout {
         grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important;
@@ -243,7 +231,6 @@ export default {
         padding: 60px;
     }
 }
-
 @media (min-width: 1024px) {
     .grid-layout {
         /* grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important; */
@@ -259,5 +246,4 @@ export default {
         padding: 15px;
     }
 }
-
 </style>

@@ -2,35 +2,22 @@
   <div>
     <div class="container pl-0 pr-0 pb-5">
       <div class="row">
-          <div class="col-12">
-              <div class="d-flex flex-row justify-content-center text-center">
-                  <h1 class="pr-2 font-weight-bold">NEW <span class="my-blue-color">ARRIVALS</span></h1>
-              </div>
-              <div class="d-flex justify-content-center">
-                  <img src="../assets/wave.png" alt="">
-              </div>
-              <div class="d-flex justify-content-center pt-3 text-center">
-                  <p>Check out our latest products from top fashion designers</p>
-              </div>
+        <div class="col-12">
+          <div class="d-flex flex-row justify-content-center text-center">
+            <h1 class="pr-2 font-weight-bold">
+              NEW
+              <span class="my-blue-color">ARRIVALS</span>
+            </h1>
           </div>
-      </div>
-      <!-- <div class="owl-container pt-3">
-        <div class="owl-carousel owl-theme owl-loaded owl-drag">
-          <div class="owl-stage-outer">
-            <div class="owl-stage">
-              <productCard />
-              <productCard />
-              <productCard />
-              <productCard />
-              <productCard />
-              <productCard />
-              <productCard />
-              <productCard />
-            </div>
-          </div>                
+          <div class="d-flex justify-content-center">
+            <img src="../assets/wave.png" alt />
+          </div>
+          <div class="d-flex justify-content-center pt-3 text-center">
+            <p>Check out our latest products from top fashion designers</p>
+          </div>
         </div>
-      </div> -->
-    
+      </div>
+
       <carousel v-if="products" class="carousel mx-auto position-relative" :margin="15" :autoplay="true" :nav="false" :autoplayHoverPause="true" :responsive="{0:{items:1}, 768:{items:3}}"> 
 
         <productCard class="w-auto" v-for="product in products" :key="product.id" :product="product" />
@@ -70,33 +57,33 @@ export default {
 
 <style lang="scss">
 
-  .next {
-    font-size: 2em;
-    color: #E3E3E3;
-    cursor: pointer;
-    position: absolute;
-    top: 35%;
-    right: -55px;
-    z-index: 10;
-      &:hover {
+.next {
+  font-size: 2em;
+  color: #E3E3E3;
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  right: -55px;
+  z-index: 10;
+    &:hover {
+    background-color: #20D3C2;
+    color: #fff;
+  }
+}
+.prev {
+  font-size: 2em;
+  color: #E3E3E3;
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  left: -55px;
+  z-index: 10;
+    
+    &:hover {
       background-color: #20D3C2;
       color: #fff;
     }
-  }
-  .prev {
-    font-size: 2em;
-    color: #E3E3E3;
-    cursor: pointer;
-    position: absolute;
-    top: 35%;
-    left: -55px;
-    z-index: 10;
-      
-      &:hover {
-        background-color: #20D3C2;
-        color: #fff;
-      }
-  }
+}
 .new-box {
   background-color: var(--ownBlue);
   padding: 0.8rem 0.8rem 1.1rem 0.8rem;
@@ -143,10 +130,6 @@ export default {
   width: 75px;
 }
 
-.item {
-  position: relative;
-}
-
 .my-mt-box {
   margin-top: 14rem;
 }
@@ -163,9 +146,9 @@ export default {
   height: 112%;
   width: 100%;
 }
-    /* hover */
+/* hover */
 .hover-me:hover + .my-show {
-    display: block;
+  display: block;
 }
 .hover-me:hover + .new-box {
   display: none;
@@ -183,31 +166,13 @@ export default {
   border-top-right-radius: 5px;
 }
 
-.bgCBlue{
+.bgCBlue {
   background-color: #0e153d;
   padding: 0.5rem;
   padding-left: 1rem;
   color: white;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-}
-
-
-
-@media (min-width: 1200px) { 
-    /* PREV */
-  .owl-carousel .owl-nav button.owl-prev {
-    position: absolute;
-    top: 32%;
-    left: -5rem;
-  }
-
-  /* NEXT */
-  .owl-carousel .owl-nav button.owl-next {
-    position: absolute;
-    top: 32%;
-    right: -5rem;
-  }
 }
 
 </style>
