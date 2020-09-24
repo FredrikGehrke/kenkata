@@ -88,7 +88,7 @@ import shoppingCartMini from "./shoppingcart/ShoppingCartMini.vue";
 import { mapGetters } from "vuex";
 
 export default {
-  name: "Navbar Middle",
+  name: "NavbarMiddle",
   components: {
     shoppingCartMini,
   },
