@@ -50,6 +50,14 @@ button {
   background-color: #20d3c2;
 }
 
+.my-dark-blue{
+  background-color:#0e153d;
+}
+
+.my-silver{
+  background-color: #CCCCCC;
+}
+
 * {
   font-family: "Roboto", sans-serif;
 }
