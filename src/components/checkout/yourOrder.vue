@@ -160,6 +160,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import darkHeaderBox from "../darkHeaderBox.vue";
 
 
@@ -177,6 +178,9 @@ export default {
     }
     return subtotal;
     }
+  },
+  computed: {
+    ...mapGetters(['getProducts'])
   },
   data() { 
     return {
