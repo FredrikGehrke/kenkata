@@ -162,13 +162,7 @@
 <script>
 import darkHeaderBox from "../darkHeaderBox.vue";
 
-const getSubtotal = (products) => {
-  let subtotal = 0;
-  for (product of products) {
-    subtotal += product.price;
-  }
-  return subtotal;
-};
+
 
 export default {
   components: {
@@ -176,14 +170,22 @@ export default {
   },
   props: ["products"],
   methods: {
-    getSubtotal,
+    getSubtotal: (products) => {
+    let subtotal = 0;
+    for (product of products) {
+      subtotal += product.price;
+    }
+    return subtotal;
+    }
   },
-  data: {
-    shippingOptions: {
-      free: 0,
-      flatrate: 20.0,
-      pickup: 25.0,
-    },
+  data() { 
+    return {
+      shippingOptions: {
+        free: 0,
+        flatrate: 20.0,
+        pickup: 25.0,
+      },
+    }
   },
 };
 </script>
