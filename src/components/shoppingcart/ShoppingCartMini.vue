@@ -20,7 +20,7 @@
         </div>
         <small class="text-muted">including VAT</small>
       </div>
-      <router-link to="/shoppingcart" class="btn checkout-btn" tag="button" v-on:click.stop>CHECKOUT</router-link>
+      <router-link to="/shoppingcart" class="btn checkout-btn" tag="button" v-on:click.stop>GO TO CART</router-link>
     </div>
   </div>
 </template>

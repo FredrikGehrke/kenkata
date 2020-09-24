@@ -134,7 +134,7 @@ export default {
 
   .WHITE-BTN {
     background-color: var(--ownBlue);
-    color: white;
+    color: white !important;
   }
 
   .title {
@@ -168,7 +168,7 @@ export default {
 
   .WHITE-BTN {
     background-color: white;
-    color: var(--ownBlue);
+    color: var(--ownBlue) !important;
   }
 
 }
