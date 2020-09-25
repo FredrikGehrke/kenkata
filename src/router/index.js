@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Shop from "../views/Shop.vue";
-import Products from "../views/Products.vue";
+import Product from "../views/Product.vue";
 import NotFound from "../views/NotFound.vue";
 import ShoppingCart from "../views/ShoppingCart.vue";
 import contactUs from '../views/contactUs.vue'
@@ -22,14 +22,14 @@ const routes = [
     component: Shop,
   },
   {
-    path: "/products",
-    name: "Products",
-    component: Products,
+    path: "/product",
+    name: "Product",
+    component: Product,
   },
   {
-    path: '/products/:id',
-    name: 'Products id',
-    component: Products,
+    path: '/product/:id',
+    name: 'Product id',
+    component: Product,
     props: true
   },
   {

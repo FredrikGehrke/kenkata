@@ -33,10 +33,10 @@
                 <li class="nav-item margin-menu-items">
                             <div class="dropdown nav-link">
                                 <a id="categoriesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Products <i class="fas fa-chevron-down smaller margin-link"></i>
+                                    Product <i class="fas fa-chevron-down smaller margin-link"></i>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <router-link class="nav-link ml-3" to="/Products">Products</router-link>
+                                    <router-link class="nav-link ml-3" to="/Product">Product page</router-link>
                                 </div>
                             </div>
                     </li>
