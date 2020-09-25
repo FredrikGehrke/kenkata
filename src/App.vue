@@ -20,7 +20,7 @@ export default {
     myFooter,
   },
   methods: {
-    ...mapActions(["getProducts"]),
+    ...mapActions(["getProducts", "getProductById"]),
   },
   created() {
     this.getProducts();

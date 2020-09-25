@@ -3,7 +3,8 @@ import { db } from '../../main'
 export default {
   state: {
     products: null,
-    product: null
+    product: null,
+
   },
   getters: {
     products: state => state.products,
@@ -16,7 +17,8 @@ export default {
     SET_PRODUCT_BYID(state, product) {
       state.product = product                                                                  
       sessionStorage.setItem('product', state.product)
-    },
+    }
+
   },
   actions: {
     getProducts: async ({commit}) => {
@@ -31,14 +33,10 @@ export default {
       commit('SET_PRODUCTS', products)
     },
     getProductById: async ({commit}, id) =>  {
-      let snapshot = await db.collection("products/" + id).get();       
-      let product = [];
-      snapshot.forEach(doc => {
-        let product = doc.data();
-        product.id = doc.id;
-        product.push(product);
-      })
+      let product = await db.collection("products").doc(id).get();
+      // console.log(product.data())
       commit('SET_PRODUCT_BYID', product)
+
     }
   }
 }
