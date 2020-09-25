@@ -94,8 +94,8 @@
     <latestBlog class="mt-5 pt-5" />
 
     <subscribe class="mt-5" />
-    <log />
-    <reg />
+    
+
     
   </div>
 </template>
@@ -111,8 +111,7 @@ import topSellers from "@/components/topSellers.vue";
 import rating from "@/components/rating.vue";
 import latestBlog from "@/components/latestBlog.vue";
 import subscribe from "@/components/subscribe.vue";
-import log from "@/components/my account/log.vue";
-import reg from "@/components/my account/Register.vue";
+
 
 
 export default {
@@ -128,8 +127,6 @@ export default {
     rating,
     latestBlog,
     subscribe,
-    log,
-    reg
     
   },
 };
