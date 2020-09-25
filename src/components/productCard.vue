@@ -56,6 +56,7 @@
 
 <script>
 import starRating from "@/components/starRating.vue";
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
   props: { product: Object },
@@ -70,6 +71,13 @@ export default {
       });
     },
   },
+  // ...mapActions(['getProductById']),
+  // created() { 
+  //   this.getProductById(this.id)
+  // },
+  // computed: {
+  //     ...mapGetters(['product']) 
+  // }
 };
 </script>
 
