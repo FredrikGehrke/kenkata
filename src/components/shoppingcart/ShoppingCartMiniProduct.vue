@@ -8,7 +8,7 @@
             <strong>{{ item.product.short }}</strong>
           </div>
           <div class="d-flex">
-            <div class="mr-5">
+            <div class="mr-md-5">
               <small
                 v-if="item.product.sale.sale"
               >{{ item.quantity }} x {{ item.product.sale.price }}kr</small>
@@ -22,7 +22,7 @@
         </div>
       </div>
       <div>
-        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+        <div class="btn-group btn-group-sm mr-2" role="group" aria-label="Basic example">
           <button v-on:click.stop="remove1" type="button" class="btn btn-grey px-3" Z>-</button>
           <button v-on:click.stop="add1" type="button" class="btn btn-grey px-3">+</button>
         </div>
@@ -69,9 +69,14 @@ export default {
 
 <style lang="scss" scoped>
 img {
-  width: 70px;
+  width: 50px;
   height: 50px;
 }
-</style>
+
+.btn-grey {
+  background: rgb(54, 54, 54);
+  color: white;
+}
 
 </style>
+

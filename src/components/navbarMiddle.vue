@@ -88,7 +88,7 @@ import shoppingCartMini from "./shoppingcart/ShoppingCartMini.vue";
 import { mapGetters } from "vuex";
 
 export default {
-  name: "Navbar Middle",
+  name: "NavbarMiddle",
   components: {
     shoppingCartMini,
   },
@@ -99,8 +99,14 @@ export default {
 </script>
 
 <style scoped>
+
 .shopping-cart {
-  min-width: 450px;
+  min-width: 360px;
+}
+@media (min-width: 576px) {
+  .shopping-cart {
+    min-width: 450px;
+  }
 }
 
 .text-size {

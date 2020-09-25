@@ -93,19 +93,6 @@ button {
   background-color: var(--ownBlue) !important;
 }
 
-/* .tooltip-cart .tooltip-inner {
-    background-color: var(--ownBlue) !important;
-    text-align: center;
-    border-radius: .25rem;
-    letter-spacing: 1px;
-  }
-  .tooltip-circle .tooltip-inner {
-    background-color: white !important;
-    text-align: center;
-    border-radius: .25rem;
-    letter-spacing: 1px;
-  } */
-
 .bs-tooltip-auto[x-placement^="left"] .arrow::before,
 .bs-tooltip-left .arrow::before {
   border-left-color: var(--ownBlue) !important;

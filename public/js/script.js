@@ -7,16 +7,6 @@ $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip()
   })
 
-  $('[data-toggle="tooltip"]').tooltip()
-  // $('#tooltip2').tooltip(); 
-
-  // $('.fa-shopping-cart').data('tooltip-custom-class', 'tooltip-cart').tooltip();
-  // $('.fas fa-circle').data('tooltip-custom-class', 'tooltip-circle').tooltip();
-
-  // $(document).on('inserted.bs.tooltip', function(e) {
-  //     var tooltip = $(e.target).data('bs.tooltip');
-  //     $(tooltip.tip).addClass($(e.target).data('tooltip-custom-class'));
-  // });
 
   /// Add a review Form START //
   function ValidateName() {
