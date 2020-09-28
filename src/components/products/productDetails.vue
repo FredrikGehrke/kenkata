@@ -67,18 +67,18 @@
 import { mapActions, mapGetters } from 'vuex'
 
 export default {
-    // name: 'productDetails',
-    // props: ['id'],
+    name: 'productDetails',
+    props: ['id'],
 
-    // methods: {
-    // ...mapActions(['getProductById'])
-    // },
-    // created() { 
-    //     this.getProductById(this.id)
-    // },
-    // computed: {
-    //     ...mapGetters(['product']) 
-    // }
+    methods: {
+    ...mapActions(['getProductById'])
+    },
+    created() { 
+        this.getProductById(this.id)
+    },
+    computed: {
+        ...mapGetters(['product']) 
+    }
 }
 </script>
 

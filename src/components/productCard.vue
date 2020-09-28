@@ -1,6 +1,6 @@
 <template>
   <router-link
-    :to="{name: 'product', params: {id: product.id}}"
+    :to="{name: 'Product', params: {id: product.id}}"
     class="card rounded-top position-relative"
   >
     <span
