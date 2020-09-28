@@ -6,6 +6,8 @@ import Product from "../views/Product.vue";
 import NotFound from "../views/NotFound.vue";
 import ShoppingCart from "../views/ShoppingCart.vue";
 import contactUs from '../views/contactUs.vue'
+import MyAccount from '../views/MyAccount.vue'
+import aboutUs from '../views/aboutUs'
 
 
 Vue.use(VueRouter);
@@ -38,6 +40,11 @@ const routes = [
     component: contactUs
   },
   {
+    path: '/my-account',
+    name: 'My Account',
+    component: MyAccount
+  },
+  {
     path: '*',
     name: 'NotFound',
     component: NotFound
@@ -46,6 +53,11 @@ const routes = [
     path: "/shoppingCart",
     name: "shoppingCart",
     component: ShoppingCart,
+  },
+  {
+    path: "/aboutUs",
+    name: "aboutUs",
+    component: aboutUs,
   },
 ];
 
