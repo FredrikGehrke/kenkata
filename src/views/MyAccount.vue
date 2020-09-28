@@ -26,8 +26,8 @@
 </template>
 
 <script>
-import log from "@/components/my account/log.vue";
-import reg from "@/components/my account/Register.vue";
+import log from "@/components/myAccount/log.vue";
+import reg from "@/components/myAccount/Register.vue";
 
 export default {
   name: "My Account",
