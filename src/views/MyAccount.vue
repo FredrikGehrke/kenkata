@@ -1,29 +1,27 @@
 <template>
-  <div class="bg-blue">
-    <div class="container">
-      <div class="pt-5 pb-5 text-white d-flex align-items-center justify-content-between">
-        <div class="my-blue-color">
-          <p class="mb-0">
-            Home
-            <span class="text-white">/</span> Shop
-            <span class="text-white">/</span> Shoes
-            <span class="text-white">/ Gents Blue Lightweight Trainers</span>
-          </p>
+  <div>
+    <div class="bg-blue">
+      <div class="container">
+        <div class="pt-5 pb-5 text-white d-flex align-items-center justify-content-between">
+          <div class="my-blue-color">
+            <p class="mb-0">
+              My Account
+            </p>
+          </div>
+          <div>
+            <span class="my-blue-color">Home </span>
+            <span class="text-white">/ My Account</span>
+          </div>
         </div>
-         <p class="mb-0">My Account</p>
       </div>
+
     </div>
-
-    <div class="d-flex justify-content-center">
-      <div class="container row">
-
+        <div class="d-flex justify-content-center mt-5 pt-5">
+          <div class="container row">
             <log />
-          
-          
             <reg />
-  
-     </div>
-    </div>
+        </div>
+      </div>
   </div>
 </template>
 
@@ -40,9 +38,9 @@ export default {
 };
 </script>
 
-<style> 
+<style scoped> 
 .bg-blue {
-    background: #0E153D;
+    background: #0E153D !important;
 }
 .white{
     background: white;

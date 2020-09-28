@@ -1,6 +1,6 @@
 <template>
-  <div class="col-6">
-    <h1>Register</h1>
+  <div class="col-6 bg-white pb-5">
+    <h1 class="pt-4">Register</h1>
     <p>
       Registering for this site allows you to access your order status and
       history. Just fill in the fields below, and we’ll get a new account set up
@@ -46,24 +46,18 @@
 <script>
 export default {};
 </script>
-<style>
-.col-6
-{
-  background-color: #f6f6f6;
-  
-  
+<style scoped>
+.bg-white {
+  background-color: #f6f6f6 !important;
 }
-.btn 
-{
+.btn {
   font-size: 18px;
   border: none;
   border-radius: 20px;
-  width: 42rem;
+  width: 100%;
   background-color: #20d3c2;
-  
 }
-h1
-{
+h1 {
   font-size: 24;
 }
 
