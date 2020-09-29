@@ -70,8 +70,9 @@ export default {
         quantity: 1,
       });
     },
+      // ...mapActions(['getProductById']),
   },
-  // ...mapActions(['getProductById']),
+
   // created() { 
   //   this.getProductById(this.id)
   // },
