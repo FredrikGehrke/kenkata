@@ -28,7 +28,7 @@
                         </div>
                     </div>
                 <div class="col pt-2">
-                    <h3 class="my-blue-color"> product name here</h3>
+                    <h3 class="my-blue-color"></h3>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud.</p>
                     <hr class="mt-4">
                     <div class="d-flex flex-row mt-4">
@@ -68,18 +68,19 @@ import { mapActions, mapGetters } from 'vuex'
 
 export default {
     name: 'productDetails',
-    // props: ['id'],
-    // props: { product: Object },
+    props: { 
+        product: Object         
+    },
 
-    // methods: {
-    // ...mapActions(['getProductById'])
-    // },
-    // created() { 
-    //     this.getProductById(this.id)
-    // },
-    // computed: {
-    //     ...mapGetters(['product']) 
-    // }
+    methods: {
+    ...mapActions(['getProductById'])
+    },
+    created() { 
+        // this.getProductById(this.id)
+    },
+    computed: {
+        // ...mapGetters(['product']) 
+    }
 }
 </script>
 
