@@ -32,8 +32,17 @@
                     <p>{{ product.description }}</p>
                     <hr class="mt-4">
                     <div class="d-flex flex-row mt-4">
-                        <h4 class="my-blue-color">${{ product.price }}</h4>
-                        <div class="ml-3 line">$220.00</div>
+                        <!-- <h4 class="my-blue-color">${{ product.price }}</h4> -->
+                        <h4 v-if="product.sale.sale" class="my-blue-color">
+                            {{ product.sale.price }}kr
+                        </h4>
+                        <h4 v-if="!product.sale.sale" class="my-blue-color">
+                        {{ product.price }}kr
+                        </h4>
+                        <!-- <div class="ml-3 line">$220.00</div> -->
+                        <p v-if="product.sale.sale" class="line ml-3">
+                            {{ product.price }}kr
+                        </p>
                         <div class="ml-3"><img  class="img-fluid" src="@/assets/InStock.png" alt=""><span class="ml-2">In stock</span></div>
                     </div>
                     <div class="d-flex flex-row mt-3">

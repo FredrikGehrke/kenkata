@@ -1,5 +1,6 @@
 <template>
   <div v-on:mouseleave="onHover = false" class="item hej bg-grey mx-auto">
+    <router-link :to="{name: 'product', params: {id: product.id }}">
     <div v-on:mouseenter="onHover = true" class="">
       <img class="rounded" :src="product.img" alt="" width="267.33px" />
     </div>
@@ -41,6 +42,7 @@
       </div>
     </div>
     <p class="bgCBlue">{{ product.short }}</p>
+    </router-link>
   </div>
 </template>
 
