@@ -18,21 +18,21 @@
             <div class="row">
                     <div class="d-flex flex-row">
                         <div class="p-2">
-                            <img class="img-fluid gray" src="@/assets/bigShoe.png" alt="">
+                            <img class="img-fluid gray" :src="product.img" width="448px" alt="">
                         </div>
                         <div class="d-none d-md-flex flex-column">
-                            <div class="pt-2"><img class="img-fluid gray" src="@/assets/smallShoe.png" alt=""></div>
-                            <div class="pt-3"><img class="img-fluid gray" src="@/assets/smallShoe.png" alt=""></div>
-                            <div class="pt-3"><img class="img-fluid gray" src="@/assets/smallShoe.png" alt=""></div>
-                            <div class="pt-3"><img class="img-fluid gray" src="@/assets/smallShoe.png" alt=""></div>
+                            <div class="pt-2"><img class="img-fluid gray" :src="product.img" width="100px" alt=""></div>
+                            <div class="pt-3"><img class="img-fluid gray" :src="product.img" width="100px" alt=""></div>
+                            <div class="pt-3"><img class="img-fluid gray" :src="product.img" width="100px" alt=""></div>
+                            <div class="pt-3"><img class="img-fluid gray" :src="product.img" width="100px" alt=""></div>
                         </div>
                     </div>
                 <div class="col pt-2">
                     <h3 class="my-blue-color">{{ product.short }}</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud.</p>
+                    <p>{{ product.description }}</p>
                     <hr class="mt-4">
                     <div class="d-flex flex-row mt-4">
-                        <h4 class="my-blue-color">$190.00</h4>
+                        <h4 class="my-blue-color">${{ product.price }}</h4>
                         <div class="ml-3 line">$220.00</div>
                         <div class="ml-3"><img  class="img-fluid" src="@/assets/InStock.png" alt=""><span class="ml-2">In stock</span></div>
                     </div>
@@ -40,14 +40,12 @@
                         <button class="btn my-btn border-left">-</button>
                         <div class="quantity">3</div>
                         <button class="btn my-btn border-right">+</button>
-                        <button class="btn my-blue text-white ml-5 addBtn"><i class="far fa-shopping-cart"></i> Add to cart</button>
+                        <button class="btn my-blue text-white ml-5 addBtn" v-on:click.prevent="addProduct"><i class="far fa-shopping-cart"></i> Add to cart</button>
                     </div>
-                    <p class="mt-4">Category: <span class="my-blue-color">Shoes</span></p>
+                    <p class="mt-4">Category: <span class="my-blue-color">{{ product.category }}</span></p>
                     <div class="d-flex">
                         <p>Tags: </p>
-                        <p class="my-border ml-3" @click="logga">Fashion</p>
-                        <p class="my-border ml-3">Shoes</p>
-                        <p class="my-border ml-3">Sneakers</p>
+                        <p class="my-border ml-3">{{ product.type }}</p>
                     </div>
                     <div class="d-flex">
                         <p class="mb-0 mt-1">Share: </p>
@@ -74,10 +72,13 @@ export default {
         }
     },
     methods: {
-    ...mapActions(['getProductById']),
-    logga() {
-        console.log(this.id)
-    }
+        ...mapActions(['getProductById']),
+            addProduct: function () {
+        this.$store.dispatch("addProductToCart", {
+            product: this.product,
+            quantity: 1,
+        });
+    },
     },
     created() { 
         let _id = this.$route.params.id

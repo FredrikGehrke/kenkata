@@ -39,8 +39,7 @@
     <div class="card-bodyy pl-3 pt-2 rounded-bottom position-absolute">
       <div class="card-text text-white">
         <p class="pb-4">{{ product.short }}</p>
-        <!-- <p class="mt-1 border d-inline-block px-2 small">Fashion</p> -->
-        <!-- <tag :text="'Fashion'" /> -->
+        <p class="mt-1 border d-inline-block px-2 small">{{ product.type }}</p>
         <p v-if="product.sale.price" class="small text-decoration-line-through">{{product.price}}:-</p>
         <p v-if="product.sale.price" class="my-blue-color font-weight-bold">{{product.sale.price}}:-</p>
         <p

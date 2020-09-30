@@ -29,12 +29,6 @@ const routes = [
     component: Product,
     props: true
   },
-  // {
-  //   path: '/product/:id',
-  //   name: 'productId',
-  //   component: Product,
-  //   props: true
-  // },
   {
     path: '/contact',
     name: 'contactUs',
