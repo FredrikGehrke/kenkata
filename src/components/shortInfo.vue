@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="margin" data-aos="flip-up" data-aos-duration="2000">
+        <div class="margin">
             <div class="row black">
                 <div class="col col-sm-6 col-md-6 col-xl mb-3">
                     <div class="d-flex flex-row bd-highlight pt-3 bg my-hover">
