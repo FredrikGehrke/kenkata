@@ -3,6 +3,7 @@ export default {
     cart: []
   },
   getters: {
+    
     shoppingCart: state => state.cart,
     shoppingCartTotal: state => {
       let totalAmount = 0;
@@ -70,6 +71,9 @@ export default {
     },
     adjustQuantity({commit}, {id, adjustment}) {
       commit("MAKE_QUANTITY_ADJUSTMENT", {id, adjustment})
+    },
+    getItem({commit}, id) {
+
     }
   }
 }

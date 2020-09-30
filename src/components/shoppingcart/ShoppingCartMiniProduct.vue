@@ -23,7 +23,7 @@
       </div>
       <div>
         <div class="btn-group btn-group-sm mr-2" role="group" aria-label="Basic example">
-          <button v-on:click.stop="remove1" type="button" class="btn btn-grey px-3" Z>-</button>
+          <button v-on:click.stop="remove1" type="button" class="btn btn-grey px-3">-</button>
           <button v-on:click.stop="add1" type="button" class="btn btn-grey px-3">+</button>
         </div>
 

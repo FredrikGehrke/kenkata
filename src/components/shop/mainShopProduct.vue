@@ -1,5 +1,6 @@
 <template>
-  <router-link :to="{name: 'product', params: {id: product.id }}" v-on:mouseleave="onHover = false" class="item hej bg-grey mx-auto">
+  <div v-on:mouseleave="onHover = false" class="item hej bg-grey mx-auto">
+    <router-link :to="{name: 'product', params: {id: product.id }}">
     <div v-on:mouseenter="onHover = true" class="">
       <img class="rounded" :src="product.img" alt="" width="267.33px" />
     </div>
@@ -12,6 +13,8 @@
         <div class="my-mt-box mr-auto">
           <p class="mb-2">{{ product.short }}</p>
           <!-- <p class="border pl-2 my-width-p">Fashion</p> -->
+          <p class="mt-1 border d-inline-block px-2 small">{{ product.type }}</p>
+          <div v-if="!product.sale.sale" class="own-mt"></div>
           <p v-if="product.sale.sale" class="line-through mb-2">
             {{ product.price }}kr
           </p>
@@ -41,7 +44,8 @@
       </div>
     </div>
     <p class="bgCBlue">{{ product.short }}</p>
-  </router-link>
+    </router-link>
+  </div>
 </template>
 
 <script>
@@ -88,6 +92,10 @@ export default {
   width: 40px;
 }
 .my-mt-box {
-  margin-top: 12rem;
+  margin-top: 10rem;
+}
+
+.own-mt {
+  margin-top: 2rem;
 }
 </style>

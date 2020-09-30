@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="product">
         <div class="bg-blue">
             <div class="container">
                 <div class="pt-5 pb-5 text-white d-flex align-items-center justify-content-between">
@@ -32,14 +32,23 @@
                     <p>{{ product.description }}</p>
                     <hr class="mt-4">
                     <div class="d-flex flex-row mt-4">
-                        <h4 class="my-blue-color">${{ product.price }}</h4>
-                        <div class="ml-3 line">$220.00</div>
+                        <!-- <h4 class="my-blue-color">${{ product.price }}</h4> -->
+                        <h4 v-if="product.sale.sale" class="my-blue-color">
+                            {{ product.sale.price }}kr
+                        </h4>
+                        <h4 v-if="!product.sale.sale" class="my-blue-color">
+                        {{ product.price }}kr
+                        </h4>
+                        <!-- <div class="ml-3 line">$220.00</div> -->
+                        <p v-if="product.sale.sale" class="line ml-3">
+                            {{ product.price }}kr
+                        </p>
                         <div class="ml-3"><img  class="img-fluid" src="@/assets/InStock.png" alt=""><span class="ml-2">In stock</span></div>
                     </div>
                     <div class="d-flex flex-row mt-3">
-                        <button class="btn my-btn border-left">-</button>
-                        <div class="quantity">3</div>
-                        <button class="btn my-btn border-right">+</button>
+                        <button class="btn my-btn border-left" v-on:click.stop="remove1">-</button>
+                        <div class="quantity">{{ item.quantity }}</div>
+                        <button class="btn my-btn border-right" v-on:click.stop="add1">+</button>
                         <button class="btn my-blue text-white ml-5 addBtn" v-on:click.prevent="addProduct"><i class="far fa-shopping-cart"></i> Add to cart</button>
                     </div>
                     <p class="mt-4">Category: <span class="my-blue-color">{{ product.category }}</span></p>
@@ -66,26 +75,45 @@ import { mapActions, mapGetters } from 'vuex'
 
 export default {
     name: 'product',
-    props: ['id'],
+    props: ['id'], 
     data() {
         return {
+            item: null,
         }
     },
     methods: {
-        ...mapActions(['getProductById']),
+        ...mapActions(['getProductById', 'adjustQuantity', 'getItem']),
             addProduct: function () {
+                        console.log(this.item)
         this.$store.dispatch("addProductToCart", {
             product: this.product,
             quantity: 1,
+        });
+        getItem(this.$route.params.id)
+    },
+        add1: function () {
+        console.log(this.item.product.id);
+        this.adjustQuantity({
+            id: this.item.product.id,
+            adjustment: "+1",
+        });
+    },
+        remove1: function () {
+        this.adjustQuantity({
+            id: this.item.product.id,
+            adjustment: "-1",
         });
     },
     },
     created() { 
         let _id = this.$route.params.id
         this.getProductById(_id)
+        let _item = this.shoppingCart.filter(item => {return item.product.id === _id})
+        this.item = _item 
+        // console.log(this.item)
     },
     computed: {
-        ...mapGetters(['product']) 
+        ...mapGetters(['product', 'shoppingCart']) 
     }
 }
 </script>
