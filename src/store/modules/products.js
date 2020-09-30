@@ -34,8 +34,7 @@ export default {
     },
     getProductById: async ({commit}, id) =>  {
       let product = await db.collection("products").doc(id).get();
-      // console.log(product.data())
-      commit('SET_PRODUCT_BYID', product)
+      commit('SET_PRODUCT_BYID', product.data())
 
     }
   }

@@ -28,7 +28,7 @@
                         </div>
                     </div>
                 <div class="col pt-2">
-                    <h3 class="my-blue-color"></h3>
+                    <h3 class="my-blue-color">{{ product.short }}</h3>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud.</p>
                     <hr class="mt-4">
                     <div class="d-flex flex-row mt-4">
@@ -45,7 +45,7 @@
                     <p class="mt-4">Category: <span class="my-blue-color">Shoes</span></p>
                     <div class="d-flex">
                         <p>Tags: </p>
-                        <p class="my-border ml-3">Fashion</p>
+                        <p class="my-border ml-3" @click="logga">Fashion</p>
                         <p class="my-border ml-3">Shoes</p>
                         <p class="my-border ml-3">Sneakers</p>
                     </div>
@@ -67,19 +67,24 @@
 import { mapActions, mapGetters } from 'vuex'
 
 export default {
-    name: 'productDetails',
-    props: { 
-        product: Object         
+    name: 'product',
+    props: ['id'],
+    data() {
+        return {
+        }
     },
-
     methods: {
-    ...mapActions(['getProductById'])
+    ...mapActions(['getProductById']),
+    logga() {
+        console.log(this.id)
+    }
     },
     created() { 
-        // this.getProductById(this.id)
+        let _id = this.$route.params.id
+        this.getProductById(_id)
     },
     computed: {
-        // ...mapGetters(['product']) 
+        ...mapGetters(['product']) 
     }
 }
 </script>

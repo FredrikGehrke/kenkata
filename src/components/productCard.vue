@@ -1,6 +1,6 @@
 <template>
   <router-link
-    :to="{name: 'product id', params: {id: product.id}}"
+    :to="{name: 'product', params: {id: product.id }}"
     class="card rounded-top position-relative"
   >
     <span
@@ -58,7 +58,7 @@
 import starRating from "@/components/starRating.vue";
 
 export default {
-  props: { product: Object },
+  props: ['product'],
   components: {
     starRating,
   },

@@ -1,5 +1,6 @@
 <template>
-  <div class="col-6 bg-white pb-5">
+<div class="col-12 col-lg-6 mt-5 mt-lg-0">
+  <div class="px-5 bg-white pb-5">
     <h1 class="pt-4">Register</h1>
     <p>
       Registering for this site allows you to access your order status and
@@ -41,6 +42,7 @@
       </p>
       <button type="submit" class="btn btn-primary">REGISTER</button>
     </form>
+  </div>
   </div>
 </template>
 <script>

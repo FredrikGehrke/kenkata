@@ -24,16 +24,17 @@ const routes = [
     component: Shop,
   },
   {
-    path: "/product",
+    path: "/product/:id",
     name: "product",
-    component: Product,
-  },
-  {
-    path: '/product/:id',
-    name: 'product id',
     component: Product,
     props: true
   },
+  // {
+  //   path: '/product/:id',
+  //   name: 'productId',
+  //   component: Product,
+  //   props: true
+  // },
   {
     path: '/contact',
     name: 'contactUs',
