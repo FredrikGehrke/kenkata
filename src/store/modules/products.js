@@ -2,9 +2,8 @@ import { db } from '../../main'
 
 export default {
   state: {
-    products: null,
-    product: null,
-
+    products: [],
+    product: {},
   },
   getters: {
     products: state => state.products,
@@ -15,10 +14,10 @@ export default {
       state.products = products
     },
     SET_PRODUCT_BYID(state, product) {
+      console.log(product)
       state.product = product                                                                  
       sessionStorage.setItem('product', state.product)
     }
-
   },
   actions: {
     getProducts: async ({commit}) => {
@@ -33,6 +32,7 @@ export default {
       commit('SET_PRODUCTS', products)
     },
     getProductById: async ({commit}, id) =>  {
+      // Detta blir id för dokumentet inte för produkten tror jag.
       let product = await db.collection("products").doc(id).get();
       commit('SET_PRODUCT_BYID', product.data())
 
