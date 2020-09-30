@@ -29,7 +29,7 @@ export default {
         product.id = doc.id;
         products.push(product);
       })
-      console.log(products)
+      // console.log(products)
       commit('SET_PRODUCTS', products)
     },
     getProductById: async ({commit}, id) =>  {

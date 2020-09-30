@@ -5,6 +5,7 @@ import store from "./store";
 
 import firebase from "firebase/app";
 import "firebase/firestore";
+import "firebase/auth"
 
 Vue.config.productionTip = false;
 
@@ -25,6 +26,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 export const db = firebase.firestore();
+export const auth = firebase.auth();
 
 
 // Google Maps

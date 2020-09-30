@@ -16,25 +16,38 @@
       </div>
 
     </div>
-        <div class="d-flex justify-content-center mt-5 pt-5">
+        <div v-if="!user" class="d-flex justify-content-center mt-5 pt-5">
           <div class="container row">
             <log />
             <reg />
+          </div>
         </div>
-      </div>
+        <div v-else class="text-center mt-5">
+          <button class="btn btn-primary col-6" @click="logout">Logout</button>
+        </div>
   </div>
 </template>
 
 <script>
 import log from "@/components/myAccount/log.vue";
 import reg from "@/components/myAccount/Register.vue";
+import { mapGetters } from 'vuex';
+import { auth } from '../main';
 
 export default {
-  name: "My Account",
+  name: "MyAccount",
   components: {
     log,
     reg,
   },
+  computed: {
+    ...mapGetters(['user'])
+  },
+  methods: {
+    logout: () => {
+      auth.signOut()
+    }
+  }
 };
 </script>
 

@@ -47,8 +47,12 @@
           </div>
         </div>
         <div class="col-xl-4 d-flex">
-          <div class="my-pt-icons text-size margin-xl">
+          <div class="my-pt-icons text-size margin-xl dropdown" id="myAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="far fa-user icon-size mr-1"></i>My account
+          </div>
+          <div class="dropdown-menu" aria-labelledby="myAccount">
+            <a v-if="user" class="dropdown-item" href="#" @click="logout">Logout</a>
+            <router-link to="/my-account" v-else class="dropdown-item" >Login</router-link>
           </div>
           <div class="my-pt-icons ml-4">
             <i class="far fa-heart icon-size"></i>
@@ -86,6 +90,7 @@
 <script>
 import shoppingCartMini from "./shoppingcart/ShoppingCartMini.vue";
 import { mapGetters } from "vuex";
+import { auth } from '../main';
 
 export default {
   name: "NavbarMiddle",
@@ -93,13 +98,20 @@ export default {
     shoppingCartMini,
   },
   computed: {
-    ...mapGetters(["shoppingCartTotal", "shoppingCartTotalNumberOfProducts"]),
+    ...mapGetters(["shoppingCartTotal", "shoppingCartTotalNumberOfProducts",'user']),
   },
+  methods: {
+    logout() {
+      auth.signOut()
+    }
+  }
 };
 </script>
 
 <style scoped>
-
+#myAccount {
+  cursor: pointer;
+}
 .shopping-cart {
   min-width: 360px;
 }
