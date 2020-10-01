@@ -55,34 +55,58 @@
     <div class="wrapper container">
       <nav class="main-nav">
         <p class="my-blue-color font-weight-bold">Product Categories</p>
+        <!-- HÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄR -->
         <ul class="text-black">
-          <li class="d-flex justify-content-between">
-            <a href="" class="pl-0">Men's</a>
-            <span class="box">18</span>
+          <li
+            :class="{ categoryActive: categoriesActive[0].active }"
+            class="d-flex justify-content-between"
+          >
+            <a v-on:click.prevent="mensCategory" class="pl-0">Men's</a>
+            <span class="box">{{ categoriesActive[0].totalProducts }}</span>
           </li>
-          <li class="d-flex justify-content-between mt-2">
-            <a href="" class="pl-0">Women's</a>
-            <span class="box">23</span>
+          <li
+            :class="{ categoryActive: categoriesActive[1].active }"
+            class="d-flex justify-content-between mt-2"
+          >
+            <a v-on:click.prevent="womensCategory" class="pl-0">Women's</a>
+            <span class="box">{{ categoriesActive[1].totalProducts }}</span>
           </li>
-          <li class="d-flex justify-content-between mt-2">
-            <a href="" class="pl-0">Kids</a>
-            <span class="box">32</span>
+          <li
+            :class="{ categoryActive: categoriesActive[2].active }"
+            class="d-flex justify-content-between mt-2"
+          >
+            <a v-on:click.prevent="kidsCategory" class="pl-0">Kids</a>
+            <span class="box">{{ categoriesActive[2].totalProducts }}</span>
           </li>
-          <li class="d-flex justify-content-between mt-2">
-            <a href="" class="pl-0">Hats</a>
-            <span class="box">12</span>
+          <li
+            :class="{ categoryActive: categoriesActive[3].active }"
+            class="d-flex justify-content-between mt-2"
+          >
+            <a v-on:click.prevent="HatsCategory" class="pl-0">Hats</a>
+            <span class="box">{{ categoriesActive[3].totalProducts }}</span>
           </li>
-          <li class="d-flex justify-content-between mt-2">
-            <a href="" class="pl-0 my-blue-color">Sunglasses</a>
-            <span class="box bg-blue">15</span>
+          <li
+            :class="{ categoryActive: categoriesActive[4].active }"
+            class="d-flex justify-content-between mt-2"
+          >
+            <a v-on:click.prevent="sunglassesCategory" class="pl-0"
+              >Sunglasses</a
+            >
+            <span class="box">{{ categoriesActive[4].totalProducts }}</span>
           </li>
-          <li class="d-flex justify-content-between mt-2">
-            <a href="" class="pl-0">Shoes</a>
-            <span class="box">12</span>
+          <li
+            :class="{ categoryActive: categoriesActive[5].active }"
+            class="d-flex justify-content-between mt-2"
+          >
+            <a v-on:click.prevent="shoesCategory" class="pl-0">Shoes</a>
+            <span class="box">{{ categoriesActive[5].totalProducts }}</span>
           </li>
-          <li class="d-flex justify-content-between mt-2">
-            <a href="" class="pl-0">Watches</a>
-            <span class="box">20</span>
+          <li
+            :class="{ categoryActive: categoriesActive[6].active }"
+            class="d-flex justify-content-between mt-2"
+          >
+            <a v-on:click.prevent="watchesCategory" class="pl-0">Watches</a>
+            <span class="box">{{ categoriesActive[6].totalProducts }}</span>
           </li>
         </ul>
         <form>
@@ -265,7 +289,7 @@
          
         <!-- Products goes here -->
         <mainShopProduct
-          v-for="product in products"
+          v-for="product in ByCategoryFilteredProducts"
           :key="product.id"
           :product="product"
         />
@@ -297,16 +321,113 @@
 import { mapGetters } from "vuex";
 import mainShopProduct from "@/components/shop/mainShopProduct";
 export default {
+  data() {
+    return {
+      ByCategoryFilteredProducts: [],
+      categoriesActive: [
+        { name: "mens", active: false, totalProducts: 0 },
+        { name: "womens", active: false, totalProducts: 0 },
+        { name: "kids", active: false, totalProducts: 0 },
+        { name: "hats", active: false, totalProducts: 0 },
+        { name: "sunglasses", active: false, totalProducts: 0 },
+        { name: "shoes", active: false, totalProducts: 0 },
+        { name: "watches", active: false, totalProducts: 0 },
+      ],
+    };
+  },
   components: {
     mainShopProduct,
   },
   computed: {
     ...mapGetters(["products"]),
   },
+  methods: {
+    mensCategory: function () {
+      this.filterCategory("mens");
+      this.handleActiveCategory("mens");
+    },
+    womensCategory: function () {
+      this.filterCategory("Women");
+      this.handleActiveCategory("womens");
+    },
+    kidsCategory: function () {
+      this.filterCategory("kids");
+      this.handleActiveCategory("kids");
+    },
+    HatsCategory: function () {
+      this.filterCategory("hats");
+      this.handleActiveCategory("hats");
+    },
+    sunglassesCategory: function () {
+      this.filterCategory("sunglasses");
+      this.handleActiveCategory("sunglasses");
+    },
+    shoesCategory: function () {
+      this.filterCategory("shoes");
+      this.handleActiveCategory("shoes");
+    },
+    watchesCategory: function () {
+      this.filterCategory("watches");
+      this.handleActiveCategory("watches");
+    },
+    filterCategory: function (category) {
+      this.ByCategoryFilteredProducts = this.products.filter((product) => {
+        return product.category === category;
+      });
+    },
+    handleActiveCategory: function (name) {
+      this.categoriesActive.forEach((category) => {
+        category.active = false;
+        if (category.name === name) {
+          category.active = true;
+        }
+      });
+    },
+  },
+  created() {
+    this.ByCategoryFilteredProducts = JSON.parse(
+      sessionStorage.getItem("products")
+    );
+    // Räknar ut antalet produkter i varje kategori
+    this.ByCategoryFilteredProducts.forEach((product) => {
+      switch (product.category) {
+        case "mens":
+          this.categoriesActive[0].totalProducts++;
+          break;
+        case "Women":
+          this.categoriesActive[1].totalProducts++;
+          break;
+        case "kids":
+          this.categoriesActive[2].totalProducts++;
+          break;
+        case "hats":
+          this.categoriesActive[3].totalProducts++;
+          break;
+        case "sunglasses":
+          this.categoriesActive[4].totalProducts++;
+          break;
+        case "shoes":
+          this.categoriesActive[5].totalProducts++;
+          break;
+        case "watches":
+          this.categoriesActive[6].totalProducts++;
+          break;
+      }
+    });
+  },
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.categoryActive {
+  a:first-child {
+    color: #20d3c2;
+  }
+  span:last-child {
+    background-color: #20d3c2;
+  }
+}
+
 .minus-margin {
   margin-top: -12rem;
 }
