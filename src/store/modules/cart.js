@@ -30,10 +30,13 @@ export default {
   mutations: {
     ADD_PRODUCT_TO_CART(state, {product, quantity}) {
       
+
+ 
       let exists = state.cart.find(item => {
+      // Produkter kan ha allt lika, men de har olika id. Denna fungerar.
         return item.product.id === product.id;
       }) 
-      
+      console.log(state.cart)
       if(exists) {
         exists.quantity += quantity;
         console.log(state.cart)
@@ -71,9 +74,6 @@ export default {
     },
     adjustQuantity({commit}, {id, adjustment}) {
       commit("MAKE_QUANTITY_ADJUSTMENT", {id, adjustment})
-    },
-    getItem({commit}, id) {
-
     }
   }
 }
