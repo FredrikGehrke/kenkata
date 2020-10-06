@@ -1,8 +1,8 @@
 <template>
   <router-link :to="`/product/${product.id}`">
-    <div v-on:mouseleave="onHover = false" class="item hej bg-grey mx-auto">
+    <div v-on:mouseleave="onHover = false" class="item bg-grey mx-auto">
       <div v-on:mouseenter="onHover = true" class="">
-        <img class="rounded" :src="product.img" alt="" width="267.33px" />
+        <img class="rounded" :src="product.img" alt=""  />
       </div>
 
       <div

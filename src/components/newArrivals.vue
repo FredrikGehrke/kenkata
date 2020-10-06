@@ -25,15 +25,26 @@
         :autoplay="true"
         :nav="false"
         :autoplayHoverPause="true"
-        :responsive="{0: {items: 1}, 768: {items: 3}}"
+        :responsive="{ 0: { items: 1 }, 768: { items: 3 } }"
       >
-        <productCard class="w-auto" v-for="product in products" :key="product.id" :product="product" />
+        <productCard
+          class="w-auto"
+          v-for="product in products"
+          :key="product.id"
+          :product="product"
+        />
 
         <template slot="next">
-          <span class="next position-absolute border px-3 rounded-circle d-none d-lg-block"><i class="fas fa-angle-right"></i></span>
+          <span
+            class="next position-absolute border px-3 rounded-circle d-none d-lg-block"
+            ><i class="fas fa-angle-right"></i
+          ></span>
         </template>
         <template slot="prev">
-          <span class="prev position-absolute border px-3 rounded-circle d-none d-lg-block"><i class="fas fa-angle-left"></i></span>
+          <span
+            class="prev position-absolute border px-3 rounded-circle d-none d-lg-block"
+            ><i class="fas fa-angle-left"></i
+          ></span>
         </template>
       </carousel>
     </div>
@@ -42,7 +53,7 @@
 
 <script>
 import carousel from "vue-owl-carousel";
-import {mapGetters} from "vuex";
+import { mapGetters } from "vuex";
 import productCard from "./productCard";
 export default {
   components: {
