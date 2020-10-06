@@ -288,7 +288,7 @@
       <article class="content product-grid row">
          
         <!-- Products goes here -->
-        <div v-for="product in products" :key="product.id" class="col-6 col-lg-4">
+        <div v-for="product in ByCategoryFilteredProducts" :key="product.id" class="col-6 col-lg-4">
           <productCard
             :product="product" class="mt-3"
           />
