@@ -18,7 +18,7 @@
         </div>
       </div>
 
-      <carousel v-if="products" class="carousel mx-auto position-relative" :margin="15" :autoplay="true" :nav="false" :autoplayHoverPause="true" :responsive="{0:{items:1}, 768:{items:3}}"> 
+      <carousel v-if="products.length" class="carousel mx-auto position-relative" :margin="15" :autoplay="true" :nav="false" :autoplayHoverPause="true" :responsive="{0:{items:1}, 768:{items:3}}"> 
 
         <productCard class="w-auto" v-for="product in products" :key="product.id" :product="product" />
 

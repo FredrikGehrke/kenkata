@@ -14,7 +14,7 @@
         </div>
       </div>
       <carousel
-        v-if="products"
+        v-if="products.length"
         class="carousel mx-auto position-relative mt-5 pt-3"
         :margin="15"
         :autoplay="true"

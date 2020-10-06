@@ -261,21 +261,19 @@
           </div>
         </div>
       </nav>
-      <article class="content product-grid">
+      <article class="content product-grid row">
          
         <!-- Products goes here -->
-        <mainShopProduct
-          v-for="product in products"
-          :key="product.id"
-          :product="product"
-        />
+        <div v-for="product in products" :key="product.id" class="col-6 col-lg-4">
+          <productCard
+            :product="product" class="mt-3"
+          />
+        </div>
          
-
         <div class="d-none d-xl-block"></div>
 
-        <div
-          class="justify-content-center align-items-center d-flex minus-margin"
-        >
+      </article>
+        <div class="justify-content-center align-items-center d-flex pages mt-4">
           <i class="fas fa-chevron-left arrows"></i>
           <p class="mb-0 ml-3 mr-3">
             <span class="mr-2">8</span>
@@ -288,17 +286,19 @@
           </p>
           <i class="fas fa-chevron-right arrows"></i>
         </div>
-      </article>
     </div>
+
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
 import mainShopProduct from "@/components/shop/mainShopProduct";
+import productCard from '../productCard'
 export default {
   components: {
     mainShopProduct,
+    productCard
   },
   computed: {
     ...mapGetters(["products"]),
@@ -330,12 +330,12 @@ export default {
   margin: auto;
 }
 
-.product-grid {
+/* .product-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 300px;
   gap: 20px;
-}
+} */
 
 .box-border {
   color: #aaaaaa;
@@ -443,6 +443,9 @@ nav ul {
   grid-area: nav;
 }
 
+.pages {
+  grid-area: switchPage;
+}
 .wrapper {
   display: grid;
   grid-gap: 20px;
@@ -469,7 +472,8 @@ nav ul {
     grid-template-columns: 1fr 4fr;
     grid-template-areas:
       "header header"
-      "nav    content";
+      "nav    content"
+      "nav    switchPage";
   }
   nav ul {
     flex-direction: column;
