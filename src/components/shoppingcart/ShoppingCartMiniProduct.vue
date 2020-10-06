@@ -61,6 +61,7 @@ export default {
       this.adjustQuantity({
         id: this.item.product.id,
         adjustment: "deleteAl",
+        
       });
     },
   },
