@@ -28,9 +28,9 @@ export default {
         let product = doc.data();
         product.id = doc.id;
         products.push(product);
-      });
-      console.log(products);
-      commit("SET_PRODUCTS", products);
+      })
+      // console.log(products)
+      commit('SET_PRODUCTS', products)
     },
     getProductById: async ({commit}, id) => {
       // Detta blir id för dokumentet inte för produkten tror jag.

@@ -12,6 +12,7 @@
 import navbar from "@/components/navbar.vue";
 import myFooter from "@/components/footer.vue";
 import { mapActions } from "vuex";
+import { auth } from './main';
 
 export default {
   name: "App",
@@ -20,12 +21,13 @@ export default {
     myFooter,
   },
   methods: {
-    ...mapActions(["getProducts", "getProductById", "checkCart"]),
+    ...mapActions(["getProducts", "getProductById", "setUser", "checkCart"]),
   },
   created() {
     this.getProducts();
-    this.checkCart();
-  },
+    this.setUser();
+        this.checkCart();
+  }
 };
 </script>
 
