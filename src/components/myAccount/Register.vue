@@ -47,7 +47,6 @@
       </form>
     </div>
   </div>
-  </div>
 </template>
 <script>
 import { auth } from '../../main'
