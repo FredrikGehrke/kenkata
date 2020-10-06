@@ -72,6 +72,9 @@ export default {
         
         sessionStorage.setItem('cart', JSON.stringify(state.cart)) // Ny
       }
+    },
+    CHECK_CART(state, cart) {
+      state.cart = cart
     }
   },
   actions: {
@@ -80,6 +83,12 @@ export default {
     },
     adjustQuantity({commit}, {id, adjustment}) {
       commit("MAKE_QUANTITY_ADJUSTMENT", {id, adjustment})
+    },
+    checkCart({commit}) {
+      let _cart = JSON.parse(sessionStorage.getItem('cart'))
+      if(_cart != null) {
+        commit("CHECK_CART", _cart)
+      }
     }
   }
 }

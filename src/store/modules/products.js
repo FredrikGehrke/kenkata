@@ -12,12 +12,12 @@ export default {
   mutations: {
     SET_PRODUCTS : (state, products) => {
       state.products = products
-      sessionStorage.setItem('products', state.product)
+      sessionStorage.setItem('products', JSON.stringify(state.products))
     },
     SET_PRODUCT_BYID(state, product) {
       console.log(product);
       state.product = product;
-      sessionStorage.setItem("product", state.product);
+      sessionStorage.setItem('product', JSON.stringify(state.product))
     },
   },
   actions: {

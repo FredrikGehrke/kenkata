@@ -20,10 +20,11 @@ export default {
     myFooter,
   },
   methods: {
-    ...mapActions(["getProducts", "getProductById"]),
+    ...mapActions(["getProducts", "getProductById", "checkCart"]),
   },
   created() {
     this.getProducts();
+    this.checkCart();
   },
 };
 </script>
