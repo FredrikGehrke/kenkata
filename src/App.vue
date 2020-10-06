@@ -50,12 +50,12 @@ button {
   background-color: #20d3c2;
 }
 
-.my-dark-blue{
-  background-color:#0e153d;
+.my-dark-blue {
+  background-color: #0e153d;
 }
 
-.my-silver{
-  background-color: #CCCCCC;
+.my-silver {
+  background-color: #cccccc;
 }
 
 * {

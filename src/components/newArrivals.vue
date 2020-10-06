@@ -18,71 +18,82 @@
         </div>
       </div>
 
-      <carousel v-if="products" class="carousel mx-auto position-relative" :margin="15" :autoplay="true" :nav="false" :autoplayHoverPause="true" :responsive="{0:{items:1}, 768:{items:3}}"> 
+      <carousel
+        v-if="products.length"
+        class="carousel mx-auto position-relative"
+        :margin="15"
+        :autoplay="true"
+        :nav="false"
+        :autoplayHoverPause="true"
+        :responsive="{ 0: { items: 1 }, 768: { items: 3 } }"
+      >
+        <productCard
+          class="w-auto"
+          v-for="product in products"
+          :key="product.id"
+          :product="product"
+        />
 
-        <productCard class="w-auto" v-for="product in products" :key="product.id" :product="product" />
-
-
-      <template slot="next">
-        <span class="next position-absolute border px-3 rounded-circle d-none d-lg-block"><i class="fas fa-angle-right"></i></span>
-      </template>
-      <template slot="prev">
-        <span class="prev position-absolute border px-3 rounded-circle d-none d-lg-block"><i class="fas fa-angle-left"></i></span>
-      </template>
-    </carousel>
-
-
-
+        <template slot="next">
+          <span
+            class="next position-absolute border px-3 rounded-circle d-none d-lg-block"
+            ><i class="fas fa-angle-right"></i
+          ></span>
+        </template>
+        <template slot="prev">
+          <span
+            class="prev position-absolute border px-3 rounded-circle d-none d-lg-block"
+            ><i class="fas fa-angle-left"></i
+          ></span>
+        </template>
+      </carousel>
     </div>
   </div>
 </template>
 
 <script>
-import carousel from 'vue-owl-carousel'
-import { mapGetters } from 'vuex'
-import productCard from './productCard'
+import carousel from "vue-owl-carousel";
+import { mapGetters } from "vuex";
+import productCard from "./productCard";
 export default {
   components: {
     carousel,
-    productCard
+    productCard,
   },
   computed: {
-    ...mapGetters(['products'])
+    ...mapGetters(["products"]),
   },
-  mounted() {
-    
-  }
-}
+  mounted() {},
+};
 </script>
 
 <style lang="scss">
-
 .next {
   font-size: 2em;
-  color: #E3E3E3;
+  color: #e3e3e3;
   cursor: pointer;
   position: absolute;
   top: 35%;
   right: -55px;
   z-index: 10;
-    &:hover {
-    background-color: #20D3C2;
+  &:hover {
+    background-color: #20d3c2;
     color: #fff;
   }
 }
 .prev {
   font-size: 2em;
-  color: #E3E3E3;
+  color: #e3e3e3;
   cursor: pointer;
   position: absolute;
   top: 35%;
   left: -55px;
   z-index: 10;
-    
-    &:hover {
-      background-color: #20D3C2;
-      color: #fff;
-    }
+
+  &:hover {
+    background-color: #20d3c2;
+    color: #fff;
+  }
 }
 .new-box {
   background-color: var(--ownBlue);
@@ -174,5 +185,4 @@ export default {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-
 </style>
