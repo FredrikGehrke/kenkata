@@ -4,7 +4,8 @@ export default {
   },
   getters: {
     
-    shoppingCart: state => state.cart = JSON.parse(sessionStorage.getItem('cart')),
+    // shoppingCart: state => state.cart = JSON.parse(sessionStorage.getItem('cart')),
+    shoppingCart: state => state.cart,
   
     shoppingCartTotal: state => {
       let totalAmount = 0;
