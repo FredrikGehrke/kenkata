@@ -4,8 +4,7 @@ export default {
   },
   getters: {
     
-    shoppingCart: state => state.cart,
-    //  = JSON.parse(sessionStorage.getItem('cart')),
+    shoppingCart: state => state.cart = JSON.parse(sessionStorage.getItem('cart')),
   
     shoppingCartTotal: state => {
       let totalAmount = 0;
@@ -37,6 +36,7 @@ export default {
       }) 
       if(exists) {
         exists.quantity += quantity;
+        sessionStorage.setItem('cart', JSON.stringify(state.cart)) // Ny
         return;
       }
 
@@ -48,22 +48,28 @@ export default {
       let productToAdjust = state.cart.find(item => {
         return item.product.id === id; 
       })
+      
       if (adjustment === "+1") {
         productToAdjust.quantity ++
-        // sessionStorage.setItem('cart', JSON.stringify(state.cart)) // Ny
+        sessionStorage.setItem('cart', JSON.stringify(state.cart)) // Ny
+
       } else if (adjustment === "-1") {
-        productToAdjust.quantity --
-        // sessionStorage.setItem('cart', JSON.stringify(state.cart)) // Ny
+        productToAdjust.quantity --,
+        sessionStorage.setItem('cart', JSON.stringify(state.cart)) // Ny
+
         if (productToAdjust.quantity <= 0) {
           state.cart = state.cart.filter(item => {
             return item.product.id !== id;
           });
         }
+
       } else {
         state.cart = state.cart.filter(item => {
           return item.product.id !== id;
+          
         });
         
+        sessionStorage.setItem('cart', JSON.stringify(state.cart)) // Ny
       }
     }
   },
