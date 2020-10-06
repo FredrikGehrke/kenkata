@@ -5,6 +5,8 @@ export default {
   getters: {
     
     shoppingCart: state => state.cart,
+    //  = JSON.parse(sessionStorage.getItem('cart')),
+  
     shoppingCartTotal: state => {
       let totalAmount = 0;
       let price = 0;
@@ -22,29 +24,24 @@ export default {
     shoppingCartTotalNumberOfProducts: state => {
       let totalProducts = 0;
       state.cart.forEach(item => {
-       totalProducts += item.quantity;
+        totalProducts += item.quantity;
       })
       return totalProducts;
     }
   },
   mutations: {
     ADD_PRODUCT_TO_CART(state, {product, quantity}) {
-      
-
- 
       let exists = state.cart.find(item => {
       // Produkter kan ha allt lika, men de har olika id. Denna fungerar.
         return item.product.id === product.id;
       }) 
-      console.log(state.cart)
       if(exists) {
         exists.quantity += quantity;
-        console.log(state.cart)
         return;
       }
 
       state.cart.push({product, quantity})
-      console.log(state.cart)
+      sessionStorage.setItem('cart', JSON.stringify(state.cart)) // Ny
       return
     },
     MAKE_QUANTITY_ADJUSTMENT(state, {id, adjustment}) {
@@ -53,8 +50,10 @@ export default {
       })
       if (adjustment === "+1") {
         productToAdjust.quantity ++
+        // sessionStorage.setItem('cart', JSON.stringify(state.cart)) // Ny
       } else if (adjustment === "-1") {
         productToAdjust.quantity --
+        // sessionStorage.setItem('cart', JSON.stringify(state.cart)) // Ny
         if (productToAdjust.quantity <= 0) {
           state.cart = state.cart.filter(item => {
             return item.product.id !== id;
