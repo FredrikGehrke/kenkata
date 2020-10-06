@@ -59,6 +59,8 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <router-link class="nav-link ml-3" to="/shoppingCart">Shopping Cart</router-link>
+                                    <router-link class="nav-link ml-3" to="/checkout">Checkout</router-link>
+                                    <router-link class="nav-link ml-3" to="/my-account">My Account</router-link>
                                     <router-link class="nav-link ml-3" to="/contact">Contact us</router-link>
                                     <router-link class="nav-link ml-3" to="/aboutUs">About us</router-link>
                                 </div>

@@ -1,13 +1,16 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
-import Shop from "../views/Shop.vue";
-import Product from "../views/Product.vue";
-import NotFound from "../views/NotFound.vue";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Home from '../views/Home.vue'
+import Shop from '../views/Shop.vue'
+import Product from '../views/Product.vue'
+import Checkout from '../views/Checkout.vue'
+import NotFound from '../views/NotFound.vue'
 import ShoppingCart from "../views/ShoppingCart.vue";
 import contactUs from '../views/contactUs.vue'
 import MyAccount from '../views/MyAccount.vue'
 import aboutUs from '../views/aboutUs'
+
+
 
 
 Vue.use(VueRouter);
@@ -38,6 +41,11 @@ const routes = [
     path: '/my-account',
     name: 'My Account',
     component: MyAccount
+  },
+  {
+    path: '/checkout',
+    name: 'Checkout',
+    component: Checkout
   },
   {
     path: '*',
