@@ -16,7 +16,7 @@
       <div>
         <div class="total-price">
           Total:
-          <span class="ml-1">{{ shoppingCartTotal }}&nbsp;kr</span>
+          <span class="ml-1">{{ shoppingCartTotal }}&nbsp; kr</span>
         </div>
         <small class="text-muted">including VAT</small>
       </div>

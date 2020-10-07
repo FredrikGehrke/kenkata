@@ -21,14 +21,7 @@
                     <router-link class="nav-link" to="/">Home</router-link>
                 </li>
                 <li class="nav-item margin-menu-items">
-                        <div class="dropdown nav-link">
-                            <a id="categoriesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Shop <i class="fas fa-chevron-down smaller margin-link"></i>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <router-link class="nav-link ml-3" to="/Shop">Shop</router-link>
-                            </div>
-                        </div>
+                    <router-link class="nav-link ml-3" to="/Shop"> Shop <i class="fas fa-chevron-down smaller margin-link"></i></router-link>
                 </li>
                 <li class="nav-item margin-menu-items">
                             <div class="dropdown nav-link">
@@ -67,7 +60,7 @@
                             </div>
                     </li>
                     <li class="nav-item margin-menu-items">
-                        <router-link class="nav-link" to="/">Blog</router-link>
+                        <router-link class="nav-link" to="/blog">Blog</router-link>
                     </li>
 
                     

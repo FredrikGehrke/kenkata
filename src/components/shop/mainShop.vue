@@ -55,7 +55,6 @@
     <div class="wrapper container">
       <nav class="main-nav">
         <p class="my-blue-color font-weight-bold">Product Categories</p>
-        <!-- HÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄR -->
         <ul class="text-black">
           <li
             :class="{ categoryActive: categoriesActive[0].active }"
@@ -288,7 +287,7 @@
       <article class="content product-grid row">
          
         <!-- Products goes here -->
-        <div v-for="product in ByCategoryFilteredProducts" :key="product.id" class="col-6 col-lg-4">
+        <div v-for="product in ByCategoryFilteredProducts" :key="product.id" class="col-6 col-lg-4 product-height">
           <productCard
             :product="product" class="mt-3"
           />
@@ -419,6 +418,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+a {
+  cursor: pointer;
+}
+
 .categoryActive {
   a:first-child {
     color: #20d3c2;
@@ -573,7 +577,8 @@ nav ul {
   grid-template-areas:
     "header"
     "nav"
-    "content";
+    "content"
+    "switchPage";
 }
 
 @media (min-width: 500px) {

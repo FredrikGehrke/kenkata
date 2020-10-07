@@ -71,7 +71,7 @@
               aria-expanded="false"
             >
               <i class="fas fa-shopping-bag icon-size"></i>
-              {{ shoppingCartTotal }}kr
+              {{ shoppingCartTotal }} kr
               <span
                 class="badge badge-pill my-blue white absoluteCart"
               >{{shoppingCartTotalNumberOfProducts}}</span>

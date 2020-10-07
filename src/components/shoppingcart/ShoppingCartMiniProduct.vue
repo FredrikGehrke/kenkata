@@ -11,12 +11,12 @@
             <div class="mr-md-5">
               <small
                 v-if="item.product.sale.sale"
-              >{{ item.quantity }} x {{ item.product.sale.price }}kr</small>
-              <small v-if="!item.product.sale.sale">{{ item.quantity }} x {{ item.product.price }}kr</small>
+              >{{ item.quantity }} x {{ item.product.sale.price }} kr</small>
+              <small v-if="!item.product.sale.sale">{{ item.quantity }} x {{ item.product.price }} kr</small>
             </div>
             <div class="ml-3">
-              <small v-if="item.product.sale.sale">{{ item.quantity * item.product.sale.price }}kr</small>
-              <small v-if="!item.product.sale.sale">{{ item.quantity * item.product.price }}kr</small>
+              <small v-if="item.product.sale.sale">{{ item.quantity * item.product.sale.price }} kr</small>
+              <small v-if="!item.product.sale.sale">{{ item.quantity * item.product.price }} kr</small>
             </div>
           </div>
         </div>

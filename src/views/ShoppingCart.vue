@@ -15,7 +15,7 @@
       </div>
       <div class="product-box">
         <!-- products from here -->
-        <ShoppingCartProduct v-for="item in shoppingCart" :key="item.product.id" :item="item" />
+        <ShoppingCartProduct v-for="item in shoppingCart" :key="item.product.id" :item="item" class="mr-1"/>
       </div>
 
       <div
@@ -36,7 +36,7 @@
       <div class="summary-text-wrapper px-4">
         <div class="d-flex justify-content-between gray-border-bottom">
           <p class="font-weight-bold">Subtotal</p>
-          <p class="turquoise-text">$910.00</p>
+          <p class="turquoise-text">{{ shoppingCartTotal }} kr</p>
         </div>
         <div class="d-flex justify-content-between gray-border-bottom">
           <div :style="{marginTop: '30px'}" class="d-flex align-items-center font-weight-bold">
@@ -46,7 +46,7 @@
             <div class>
               <div class="d-flex justify-content-end mt-3">
                 <p class="mr-1">Flat rate:</p>
-                <p class="turquoise-text mr-3">20.00$</p>
+                <p class="turquoise-text mr-3">20 kr</p>
                 <div>
                   <input
                     type="radio"
@@ -70,7 +70,7 @@
               </div>
               <div class="d-flex justify-content-end">
                 <p class="mr-1">Local pickup:</p>
-                <p class="turquoise-text mr-3">$25.00</p>
+                <p class="turquoise-text mr-3">25 kr</p>
                 <div>
                   <input
                     type="radio"
@@ -96,7 +96,7 @@
         </div>
         <div class="mt-4 d-flex justify-content-between">
           <h6 class="font-weight-bold">TOTAL</h6>
-          <h6 class="turquoise-text font-weight-bold">930.00&nbsp;kr</h6>
+          <h6 class="turquoise-text font-weight-bold">{{ shoppingCartTotal }}&nbsp;kr</h6>
         </div>
         <div class="d-flex justify-content-center">
           <button class="btn checkout-btn mt-2 special-btn">PROCEED TO CHECKOUT</button>
